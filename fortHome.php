@@ -73,6 +73,37 @@
                 padding-left:30px;
                 color:white;
             }
+            
+            /*All THE TABLES CSS */
+            table, td, th {
+				border: 1px solid transparent;
+				text-align: center;
+			}
+			table {
+				border-collapse: collapse;
+				width: 500px;
+				margin-left: 420px;
+				
+			}
+			th{
+				height: 40px;
+				
+			}
+			#tables{
+				text-align: center;
+			}
+			#globalRank{
+				background-color: #D25F5F;
+			}
+			#xboxRank{
+				background-color: #01DF3A;
+			}
+			#ps4Rank{
+				background-color: #5882FA;
+			}
+			#pcRank{
+				background-color:#D8D8D8;
+			}
         </style>
         
     </head>
@@ -95,6 +126,84 @@
                     <a href id = "faqTab" src = "index.php">FAQ</a>
                 </nav>
             </form>
+            
+                <!--***********The whole table div*********** -->
+    		<div id = "tables">
+    			<!--********** Global rank Table************ -->
+    			<div id = "globalRank">
+    				<br>
+    				<table id = "globalTable">
+    					<tr>
+    						<b><u>Global Stats</u></b>
+    					</tr>
+    					<tr>
+    						<th>Username</th>
+    						<th>Wins</th>
+    					</tr>
+    					<tr id = "globalStats">
+    						<td>fduenez</td>
+    						<td>21</td>
+    					</tr>
+    				</table>
+    				<br>
+    			
+    			</div>
+    			<!--********** xbox rank Table************ -->
+    			<div id = "xboxRank">
+    				<br>
+    				<table id = "xboxTable">
+    					<tr>
+    						<b><u>Xbox Stats</u></b>
+    					</tr>
+    					<tr>
+    						<th>Username</th>
+    						<th>Wins</th>
+    					</tr>
+    					<tr id = "xboxStats">
+    						<td>fduenez</td>
+    						<td>21</td>
+    					</tr>
+    				</table>
+    				<br>
+    			
+    			</div>
+    			<!--********** ps4 rank Table************ -->
+    			<div id = "ps4Rank">
+    				<br>
+    				<table id = "ps4Table">
+    					<tr>
+    						<b><u>PS4 Stats</u></b>
+    					</tr>
+    					<tr>
+    						<th>Username</th>
+    						<th>Wins</th>
+    					</tr>
+    					<tr id = "ps4Stats">
+    						<td>fduenez</td>
+    						<td>21</td>
+    					</tr>
+    				</table>
+    				<br>
+    			</div>
+    			<!--********** pc rank Table************ -->
+    			<div id = "pcRank">
+    				<br>
+    				<table  id = "pcTable">
+    					<tr>
+    						<b><u>PC Stats</u></b>
+    					</tr>
+    					<tr>
+    						<th>Username</th>
+    						<th>Wins</th>
+    					</tr>
+    					<tr id = "pcStats">
+    						<td>fduenez</td>
+    						<td>21</td>
+    					</tr>
+    				</table>
+    				<br>
+    			</div>
+    		</div>
         </header>
         
         
