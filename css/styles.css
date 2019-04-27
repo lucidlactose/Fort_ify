@@ -47,7 +47,7 @@ header{
     padding-top:2%;
     position:sticky;
     top:0;
-    background-color:darkBlue;
+    background-color:linear-gradient(to right, #C70039, #ECD0D0);
     width:100%;
     
 }
