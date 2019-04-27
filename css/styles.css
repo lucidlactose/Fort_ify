@@ -109,21 +109,25 @@ th{
 	background-image: linear-gradient(#FEDA57, #FFC300  );
 	width: 100%;
 	height: 720px;
+	color: white;
 }
 #xboxRank{
 	background-image: linear-gradient(#7BFF9B, #2DE458);
 	width: 100%;
 	height: 720px;
+	color: white;
 }
 #ps4Rank{
 	background-image: linear-gradient(#84DEFF, #2DA3E4);
 	width: 100%;
-	height: 720px
+	height: 720px;
+	color: white;
 }
 #pcRank{
 	background-image: linear-gradient(#FDFEFF, #696B6E);
 	width: 100%;
-	height: 720px
+	height: 720px;
+	color: black;
 }
 /******************************************************/
 /*********       PLAYER STATS-SECTION     *************/
