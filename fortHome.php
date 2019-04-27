@@ -4,7 +4,9 @@
         <title> Fortnite Looker </title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="css/styles.css" rel="stylesheet" type="text/css" />
-
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://sdk.scoutsdk.com/1.0.0/js/Scout.js"></script>
+        <script type="text/javascript" src="js/APIstuff.js"></script>
         
     </head>
     <body>
@@ -105,48 +107,5 @@
     			</div>
     		</div>
         </body>
-
         
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script type="text/javascript">
-        
-        $(function(){
-                    
-            //**********************************************************************
-            //*******************_______NAVIGATION BAR_______***********************
-            var type = "getPCPlayer.php";
-            $("#ps4Tab").on("click",function(){
-                type = "getPS4Player.php";
-                // console.log(type);
-            });
-            $("#xbxTab").on("click",function(){
-                type = "getXBXPlayer.php";
-                // console.log(type);
-            });
-            $("#pcTab").on("click",function(){
-                type = "getPCPlayer.php";
-                // console.log(type);
-            });
-            
-            // ****************_______search ajax call_______********************
-            $.ajax({
-                type:"GET" ,
-                url: "api/" + console,
-                dataType: "json",
-                data:{
-                    "search": $("#searchQ").val()
-                },
-                success:function(data, status){
-                    
-                }
-            });
-            
-            
-            
-        });
-        
-        
-
-        </script>
-
 </html>
