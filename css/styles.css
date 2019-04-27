@@ -103,22 +103,22 @@ th{
 #globalRank{
     background-image: linear-gradient(#FEDA57, #FFC300  );
 	width: 100%;
-	height: 350px;
+	height: 720px;
 }
 #xboxRank{
 	background-image: linear-gradient(#4FE573, #38EF63);
 	width: 100%;
-	height: 350px;
+	height: 720px;
 }
 #ps4Rank{
 	background-image: linear-gradient(#74CAEB, #4DC0ED);
 	width: 100%;
-	height: 350px
+	height: 720px
 }
 #pcRank{
 	background-image: linear-gradient(#CAD3C9, #7E847E);
 	width: 100%;
-	height: 350px
+	height: 720px
 }
 /******************************************************/
 /*********       PLAYER STATS-SECTION     *************/
