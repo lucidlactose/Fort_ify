@@ -90,14 +90,22 @@ th{
 	text-align: center;
 }
 #globalRank{
-	background-color: #D25F5F;
+    background-image: linear-gradient(#FEDA57, #FFC300  );
+	width: 100%;
+	height: 350px;
 }
 #xboxRank{
-	background-color: #01DF3A;
+	background-image: linear-gradient(#4FE573, #38EF63);
+	width: 100%;
+	height: 350px;
 }
 #ps4Rank{
-	background-color: #5882FA;
+	background-image: linear-gradient(#74CAEB, #4DC0ED);
+	width: 100%;
+	height: 350px
 }
 #pcRank{
-	background-color:#D8D8D8;
+	background-image: linear-gradient(#CAD3C9, #7E847E);
+	width: 100%;
+	height: 350px
 }
