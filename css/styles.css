@@ -67,7 +67,7 @@ nav{
 }
 @font-face { 
     font-family: fortniteFont;
-    src: url('src/fortnite.ttf');
+    src: url('../src/fortnite.ttf');
 } 
 h3 {
     font-family: fortniteFont;
