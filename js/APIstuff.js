@@ -8,43 +8,40 @@ Scout.configure({
     
 })
 
-Scout.titles.list().then(titles => console.log(titles))
 
-
+// Scout.titles.list().then(titles => console.log(titles));
+Scout.players.search("Ninja", "epic", null, "fortnite").then(results => {
+      console.log(results)
+    })
 
 $(function(){
-            
     //**********************************************************************
     //*******************_______NAVIGATION BAR_______***********************
     var type = "getPCPlayer.php";
-    $("#ps4Tab").on("click",function(){
+    $("#ps4Tab").on("click", function(){
         type = "getPS4Player.php";
         // console.log(type);
     });
-    $("#xbxTab").on("click",function(){
+    $("#xbxTab").on("click", function(){
         type = "getXBXPlayer.php";
         // console.log(type);
     });
-    $("#pcTab").on("click",function(){
+    $("#pcTab").on("click", function(){
         type = "getPCPlayer.php";
         // console.log(type);
     });
     
     // ****************_______search ajax call_______********************
-    
-    
-    $.ajax({
-        type:"GET" ,
-        url: "api/" + console,
-        dataType: "json",
-        data:{
-            "search": $("#searchQ").val()
-        },
-        success:function(data, status){
+    // $.ajax({
+    //     type:"GET" ,
+    //     url: "api/" + console,
+    //     dataType: "json",
+    //     data:{
+    //         "search": $("#searchQ").val()
+    //     },
+    //     success:function(data, status){
             
-        }
-    });
-    
-    
+    //     }
+    // });
     
 });
