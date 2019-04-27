@@ -131,8 +131,8 @@
                     <a href id = "faqTab" src = "index.php">FAQ</a>
                 </nav>
             </form>
-            
-                <!--***********The whole table div*********** -->
+        </header>
+            <!--***********The whole table div*********** -->
     		<div id = "tables">
     			<!--********** Global rank Table************ -->
     			<div id = "globalRank">
@@ -209,7 +209,8 @@
     				<br>
     			</div>
     		</div>
-        </header>
+        </body>
+
         
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script type="text/javascript">
@@ -253,5 +254,4 @@
 
         </script>
 
-    </body>
 </html>
