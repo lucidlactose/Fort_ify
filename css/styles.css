@@ -103,6 +103,10 @@ th{
 #tables{
 	text-align: center;
 }
+#sectionTitle{
+			margin-left: 100px;
+			font-size: 50px;
+}
 #globalRank{
 		background-image: linear-gradient(#FEDA57, #FFC300  );
 	width: 100%;

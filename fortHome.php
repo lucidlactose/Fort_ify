@@ -36,7 +36,7 @@
     				<br>
     				<table id = "globalTable">
     					<tr>
-    						<b><u>Global Stats</u></b>
+    						<b id= "sectionTitle">Global Stats</b>
     					</tr>
     					<tr>
     						<th>Username</th>
@@ -55,7 +55,7 @@
     				<br>
     				<table id = "xboxTable">
     					<tr>
-    						<b><u>Xbox Stats</u></b>
+    						<b id= "sectionTitle">Xbox Stats</b>
     					</tr>
     					<tr>
     						<th>Username</th>
@@ -74,7 +74,7 @@
     				<br>
     				<table id = "ps4Table">
     					<tr>
-    						<b><u>PS4 Stats</u></b>
+    						<b id= "sectionTitle">PS4 Stats</b>
     					</tr>
     					<tr>
     						<th>Username</th>
@@ -92,7 +92,7 @@
     				<br>
     				<table  id = "pcTable">
     					<tr>
-    						<b><u>PC Stats</u></b>
+    						<b id= "sectionTitle">PC Stats</b>
     					</tr>
     					<tr>
     						<th>Username</th>
