@@ -66,9 +66,38 @@ nav{
     padding-left:2%
 }
 @font-face { 
-    font-family: fortniteFont; 
-    src: url('src/fortnite.ttf'); 
-} 
-h3 { 
     font-family: fortniteFont;
+    src: url('src/fortnite.ttf');
+} 
+h3 {
+    font-family: fortniteFont;
+}
+table, td, th {
+	border: 1px solid transparent;
+	text-align: center;
+}
+table {
+	border-collapse: collapse;
+	width: 500px;
+	margin-left: 420px;
+	
+}
+th{
+	height: 40px;
+	
+}
+#tables{
+	text-align: center;
+}
+#globalRank{
+	background-color: #D25F5F;
+}
+#xboxRank{
+	background-color: #01DF3A;
+}
+#ps4Rank{
+	background-color: #5882FA;
+}
+#pcRank{
+	background-color:#D8D8D8;
 }
