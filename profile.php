@@ -18,7 +18,7 @@
                 <a href="#">My Stats</a>
                 <a href="#">Following</a>
                 <a href="#">Followers</a>
-                <a href="#">Groups</a>
+                <a href="#">Sign Out</a>
             </div>
             <form class="navigationBar">
                 <div id = "logo">
