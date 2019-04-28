@@ -7,6 +7,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://sdk.scoutsdk.com/1.0.0/js/Scout.js"></script>
         <script type="text/javascript" src="js/APIstuff.js"></script>
+        <script type="text/javascript" src="js/profilesPage.js"></script>
         
     </head>
     <body>
@@ -40,15 +41,7 @@
             
         </header>
         
-    <script>
-        function openNav() {
-          document.getElementById("mySidenav").style.width = "250px";
-        }
-        
-        function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
-        }
-    </script>
+    
     		
     </body>
     
