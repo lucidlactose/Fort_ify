@@ -98,8 +98,8 @@
     						<th>Username</th>
     						<th>Wins</th>
     					</tr>
-    					<tr id = "pcStats">
-    						<td>fduenez</td>
+    					<tr id = "pcStats ">
+    						<td>fduenez </td>
     						<td>21</td> 
     						
     					</tr>
