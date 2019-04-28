@@ -81,7 +81,7 @@
     						<th>Wins</th>
     					</tr>
     					<tr id = "ps4Stats">
-    						<td>fduenez</td>
+    						<td>fduenez </td>
     						<td>21</td>
     					</tr>
     				</table>
@@ -100,7 +100,8 @@
     					</tr>
     					<tr id = "pcStats">
     						<td>fduenez</td>
-    						<td>21</td>
+    						<td>21</td> 
+    						
     					</tr>
     				</table>
     				<br>
