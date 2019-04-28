@@ -34,7 +34,7 @@
                     <a href id = "streamingTab" src = "index.php">Streaming</a>
                     <a href id = "faqTab" src = "index.php">FAQ</a>
                 </nav>
-                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                <span id = "sideMenu" onclick="openNav()">&#9776;</span>
 
             </form>
             
