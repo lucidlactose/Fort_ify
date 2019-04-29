@@ -7,7 +7,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://sdk.scoutsdk.com/1.0.0/js/Scout.js"></script>
         <script type="text/javascript" src="js/APIstuff.js"></script>
-        <script type="text/javascript" src="js/profilesPage.js"></script>
+        <script type="text/javascript" src="js/profilePage.js"></script>
         
     </head>
     <body>
@@ -27,7 +27,7 @@
                 <button type = "button" id="ps4Tab" >PS4</button>
                 <button type = "button" id="xbxTab" >XBX</button>
                 <button type = "button" id="pcTab" >PC</button>
-                <input type="text" placeholder="Enter your Epic Games username..." name="search" id = "searchQ">
+                <input type="text" placeholder="Enter your Epic Games username..." data-username="{{result['username']}}" name="search" id = "searchQ">
                 <button type="button" id ="searchButton"><i class="fa fa-search"></i></button>
                 <nav>
                     <a href id = "rankingsTab"src = "index.php">Rankings</a>

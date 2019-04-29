@@ -1,3 +1,10 @@
+// <?php
+
+//     $url = "https://localhost/searchResults.php";
+//     $queryString = http_build_query("username"=>username);
+
+// ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,7 +26,7 @@
                 <button type = "button" id="ps4Tab" >PS4</button>
                 <button type = "button" id="xbxTab" >XBX</button>
                 <button type = "button" id="pcTab" >PC</button>
-                <input type="text" placeholder="Enter your Epic Games username..." name="search" id = "searchQ">
+                <input type="text" placeholder="Enter your Epic Games username..." data-username="{{result['username']}}" name="search" id = "searchQ">
                 <button type="button" id ="searchButton"><i class="fa fa-search"></i></button>
                 <nav>
                     <a href id = "rankingsTab"src = "index.php">Rankings</a>
