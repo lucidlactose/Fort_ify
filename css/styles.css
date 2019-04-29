@@ -69,10 +69,11 @@ nav{
 				
 }
 
-#rankingsTab, #newsTab, #streamingTab, #faqTab{
+#rankingsTab, #newsTab, #streamingTab{
 		padding-left:30px;
 		color:white;
 }
+
 #logo{
 		padding-right:2%;
 		padding-left:2%
