@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title> Fortnite Looker </title>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link href="css/styles.css" rel="stylesheet" type="text/css"/>
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-		<script src="https://sdk.scoutsdk.com/1.0.0/js/Scout.js"></script>
-		<script type="text/javascript" src="js/APIstuff.js"></script>
-		
-	</head>
+        <title> Fortnite Looker </title>
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://sdk.scoutsdk.com/1.0.0/js/Scout.js"></script>
+        <script type="text/javascript" src="js/APIstuff.js"></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <meta name="google-signin-client_id" content="771332740040-bst02ajh5o98uga1dk3e36sv30pjknuh.apps.googleusercontent.com">
+    </head>
+    
 	<body>
 		
 		<header>
