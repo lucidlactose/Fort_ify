@@ -3,13 +3,14 @@
 	<head>
 		<title> Fortnite Looker </title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link href="css/styles.css" rel="stylesheet" type="text/css" />
+		<link href="css/styles.css" rel="stylesheet" type="text/css"/>
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 		<script src="https://sdk.scoutsdk.com/1.0.0/js/Scout.js"></script>
 		<script type="text/javascript" src="js/APIstuff.js"></script>
 		
 	</head>
 	<body>
+		
 		<header>
 			<form class="navigationBar">
 				<div id = "logo">
@@ -34,7 +35,7 @@
 					<b id= "gamertag">Fduenez</b>
 				</tr>
 				<tr>
-					<td><img src="player3.png"/><td>
+					<td><img src="img/player3.png"/><td>
 					<td>
 						<table id = "mystats">
 							<tr>
@@ -89,4 +90,3 @@
 </body>
 		
 </html>
-
