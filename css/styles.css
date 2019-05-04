@@ -184,6 +184,78 @@ th{
 	
 }
 /******************************************************/
+/*********      MY STATS-SECTION      *************/
+/******************************************************/
+#mystats{
+  margin-top: -10px;
+  margin-left: -6px;
+  width: 750px;
+  height: 100px;
+}
+td{ 
+  border-bottom-style: solid;
+  border-bottom-color: red;
+}
+#playerstats{
+  background-color: orange;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#everyonesStats{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: red;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#myStatsTable{
+  margin-left: 250px;
+}
+#gamertag{
+  margin-left: 600px;
+  font-size: 50px;
+}
+
+#percentage{
+  background-color: green;
+  margin-top: -50px;
+  height: 165px;
+  margin-bottom: -50px;
+  width: 200px;
+}
+#squadTable{
+  background-color: yellow;
+  margin-top: -50px;
+  margin-bottom: -50px;
+}
+#teammateStat{
+  margin-left: 0px;
+  width: 200px;
+  margin-top: 50px;
+}
+#friendRanking{
+  background-color: blue;
+  margin-top: -50px;
+  margin-bottom: -50px;
+  width: 200px;
+}
+#compairFriendTag{
+  width: 300px;
+  height: 40px;
+  font-size: 25px;
+}
+#compairbutton{
+  width:100px;
+  height:35px;
+  background-color: #2196F3;
+}
+#searchteammate{
+  margin-left: 400px;
+}
+
+/******************************************************/
 /*********        SIDE BAR-SECTION        *************/
 /****************       END       *********************/
 /*------------------------------------------------------------------------------------*/
