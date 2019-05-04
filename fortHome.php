@@ -13,7 +13,7 @@
         <link href="css/styles.css" rel="stylesheet" type="text/css" />
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://sdk.scoutsdk.com/1.0.0/js/Scout.js"></script>
-        <script type="text/javascript" src="js/APIstuff.js"></script>
+        <script type="text/javascript" src="js/everyPage.js"></script>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <meta name="google-signin-client_id" content="771332740040-bst02ajh5o98uga1dk3e36sv30pjknuh.apps.googleusercontent.com">
         
@@ -29,7 +29,7 @@
                 <button type = "button" id="xbxTab" >XBX</button>
                 <button type = "button" id="pcTab" >PC</button>
                 <input type="text" placeholder="Enter your Epic Games username..." data-username="{{result['username']}}" name="search" id = "searchQ">
-                <button type="button" id ="searchButton"><i class="fa fa-search"></i></button>
+                <button type="button" id="searchButton"><i class="fa fa-search"></i></button>
                 <nav>
                     <a href id = "rankingsTab"src = "index.php">Rankings</a>
                     <a href id = "newsTab" src = "index.php">News</a>

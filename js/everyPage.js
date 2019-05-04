@@ -29,3 +29,10 @@ $(function(){
     });
     
 });
+
+$(document).on('keypress', function(e) {
+    var keycode = event.keyCode || event.which;
+    if(keycode == 13) {
+        alert('You pressed enter!');
+    }
+});
