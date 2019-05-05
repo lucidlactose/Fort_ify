@@ -1,9 +1,11 @@
-// <?php
+<!-- <?php
 
 //     $url = "https://localhost/searchResults.php";
 //     $queryString = http_build_query("username"=>username);
 
 // ?>
+
+-->
 
 <!DOCTYPE html>
 <html>
@@ -37,8 +39,8 @@
                 </nav>
                 <div class="g-signin2" data-onsuccess="onSignIn"></div>
             </form>
-
         </header>
+        
             <!--***********The whole table div*********** -->
     		<div id = "tables">
     			<!--********** Global rank Table************ -->
