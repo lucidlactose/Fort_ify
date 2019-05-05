@@ -3,8 +3,9 @@
 include "../dbConnection.php";
 $conn = getDatabaseConnection("fortnite");
 
-$sql = "INSERT INTO following (follower_username, followee_username) ".
-        "VALUES (:follower, :followee)";
+$sql = "DELETE FROM following " .
+        "WHERE follower LIKE :follower " .
+        "AND followee LIKE :followee";
 
 $np = array();
 $np[":follower"] = $_POST["follower"];

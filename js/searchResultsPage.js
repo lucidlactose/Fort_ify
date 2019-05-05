@@ -36,9 +36,9 @@
 
 $(function() {
     console.log("search: ")
-    Scout.players.search("Ninja", "psn", "ps4", "fortnite")
+    // Scout.players.search("Ninja", "psn", "ps4", "fortnite")
         // .then(search => Scout.players.get("fortnite", search.results[0].player.playerId))
-        .then(ninja => console.log(ninja))
+        // .then(ninja => console.log(ninja))
     // Scout.titles.list().then(titles => console.log(titles))
 
     // Scout.players.search("Ninja", "psn", null, "fortnite")

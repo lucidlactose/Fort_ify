@@ -1,0 +1,46 @@
+.player-box {
+    margin: 3%;
+    padding: 2%;
+    border: 2px black solid;
+}
+.player-specifics {
+    margin: 3% 3% 0;
+    padding: 2%;
+    border: 2px black solid;
+}
+#profile-pic {
+    display: inline;
+    margin-right: 2%;
+}
+#player-name {
+    display: inline;
+    font-weight: bold;
+    font-size: 2rem;
+}
+#follow-button {
+    margin-left: 10%;
+}
+
+.stats {
+    display:inline-block;
+    margin: 3% 3% 0;
+    padding: 2%;
+    border: 2px black solid;
+    text-align: center;
+    font-size: 2rem;
+}
+#stat button {
+    border: 1px solid green;
+    text-align: center;
+    height: 40px;
+    font-size: 1.5rem;
+    background-color: #afa;
+}
+#stat button:hover {
+    background-color: grey;
+}
+.current-stat {
+    margin: 3% 3% 0;
+    padding: 5.5%;
+    border: 2px black solid;
+}

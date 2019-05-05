@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 	<head>
         <title> Player </title>
+        <meta charset="utf-8">
         <!--our stylesheets-->
         <link href="css/searchResults.css" rel="stylesheet" type="text/css"/>
         <link href="css/styles.css" rel="stylesheet" type="text/css"/>
-        <!--someone else crud-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script src="https://sdk.scoutsdk.com/1.0.0/js/Scout.js"></script>
-        <!--our webpage javascript-->
-        <script type="text/javascript" src="js/everyPage.js"></script>
-        <script type="text/javascript" src="js/searchResultsPage.js"></script>
+            <!--someone else crud-->
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+        <!--<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>-->
+        <!--<script src="https://sdk.scoutsdk.com/1.0.0/js/Scout.js"></script>-->
+            <!--our webpage javascript-->
+        <!--<script type="text/javascript" src="js/everyPage.js"></script>-->
+        <!--<script type="text/javascript" src="js/searchResultsPage.js"></script>-->
         
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
-        <meta name="google-signin-client_id" content="771332740040-bst02ajh5o98uga1dk3e36sv30pjknuh.apps.googleusercontent.com">
+        <!--<script src="https://apis.google.com/js/platform.js" async defer></script>-->
+        <!--<meta name="google-signin-client_id" content="771332740040-bst02ajh5o98uga1dk3e36sv30pjknuh.apps.googleusercontent.com">-->
     </head>
     
 	<body>
@@ -43,26 +43,40 @@
                     <a href id = "faqTab" src = "index.php">FAQ</a>
                 </nav>
                 <span id = "sideMenu" onclick="openNav()">&#9776;</span>
-
             </form>
         </header>
         
-	
-		<div id = "playerstats">
-		    <div>
-		        <div id="profilePic"> <img src="#" alt="profilePic"> </div>
-		        <div id="playerName"> playerName </div>
-		        <button id="follow" name="follow"> <img src="img/followImg.png" alt="+"> </button>
-		        <button id="refresh">  <img src="img/refreshImg.png" alt="refresh"> </button>
+		<div class= "player-box">
+		    <div class="player-specifics">
+		        <div id="profile-pic"> <img src="#" alt="profilePic"> </div>
+		        <div id="player-name"> playerName </div>
+		        <button id="follow-button" name="follow"> <img src="img/followImg.png" alt="+"> </button>
+		        <button id="refresh-button">  <img src="img/refreshImg.png" alt="refresh"> </button>
 		    </div>
 		    
-		    <div id="stats">
-		        <div id="stat"> wins:    <span id="wins"></span> </div>
-		        <div id="stat"> score:   <span id="score"></span> </div>
-		        <div id="stat"> winrate: <span id="kd"></span> </div>
-		        <div id="stat"> kills:   <span id="kills"></span> </div>
-		        <div id="stat"> K/D:     <span id="kd"></span> </div>
+		    <div class="stats">
+	            <span id="stat-header">Tags: </span>
+	            <span id="stat"> <button> BBC     </button> </span>
+		        <!--<div id="stat"> <button> score    </button> </div>-->
+                <span id="stat"> <button> HARDCORE    </button> </span>
+		        <span id="stat"> <button> BLONDE  </button> </span>   
 		    </div>
+		    
+		    <div class="stats">
+	            <span id="stat-header">Stats: </span>
+	            <span id="stat"> <button> WINS     </button> </span>
+		        <!--<div id="stat"> <button> score    </button> </div>-->
+                <span id="stat"> <button> SCORE    </button> </span>
+		        <span id="stat"> <button> WINRATE  </button> </span>
+		        <span id="stat"> <button> KILLS    </button> </span>
+		        <span id="stat"> <button> K/D      </button> </span>        
+		    </div>
+	        <div class="current-stat">
+		        <div id="wins"> Here are my amount of wins. Maybe you can help increase it ;) </div>
+		        <div id="score"> Here's my score: </div>
+		        <div id="kd"> My k/d... ik im not that good... maybe... you can help ;> </div>
+		        <div id="kills"> kills: </div>
+	        </div>    
 		</div>
 			
 </body>
