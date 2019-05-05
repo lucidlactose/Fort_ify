@@ -1,10 +1,3 @@
-Scout.configure({
-  clientId: "e90f5a13-6bc1-4d8d-b3aa-0724a4212d39"
-}).then(() => {
-  // Perform Scout queries here
-    
-})
-
 // Scout.players.search("Ninja", "epic", null, "fortnite").then(results => {
 //       console.log(results)
 //     })
@@ -19,12 +12,3 @@ Scout.configure({
 //   })
 // }
 
-
-
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}

@@ -1,21 +1,21 @@
 <?php
 
 include "../dbConnection.php";
-$conn = getDatabaseConnection("ottermart");
+$conn = getDatabaseConnection("fortnite");
 
 $productId = $_GET["productId"];
-$sql = "SELECT * 
-        FROM om_product 
-        NATURAL JOIN om_purchase 
-        WHERE productId = :pId";
+$sql = "INSERT INTO following (follower_username, followee_username) ".
+        "VALUES (:follower, :followee)";
 
 $np = array();
-$np[":pId"] = $productId;
+$np[":follower"] = $_POST["follower"];
+$np[":followee"] = $_POST["followee"];
 
 $stmt = $conn->prepare($sql);
 $stmt->execute($np);
-$records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-echo json_encode($records);
+// echo json_encode($records);
+echo json_decode(array("status"=>"success"))
 
 ?>
