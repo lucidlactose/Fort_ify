@@ -8,7 +8,9 @@
         <script src="https://sdk.scoutsdk.com/1.0.0/js/Scout.js"></script>
         <script type="text/javascript" src="js/everyPage.js"></script>
         <script type="text/javascript" src="js/profilePage.js"></script>
-        
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <meta name="google-signin-client_id" content="771332740040-bst02ajh5o98uga1dk3e36sv30pjknuh.apps.googleusercontent.com">
+        <div class="g-signin2"></div>
     </head>
     <body>
         
@@ -18,7 +20,7 @@
                 <a href="#">My Stats</a>
                 <a href="#">Following</a>
                 <a href="#">Followers</a>
-                <a href="#">Sign Out</a>
+                <a href="fortHome.php" onclick="signOut()">Sign Out</a>
             </div>
             <form class="navigationBar">
                 <div id = "logo">
@@ -32,8 +34,8 @@
                 <nav>
                     <a href id = "rankingsTab"src = "index.php">Rankings</a>
                     <a href id = "newsTab" src = "index.php">News</a>
-                    <a href id = "streamingTab" src = "index.php">Streaming</a>
-                    <a href id = "faqTab" src = "index.php">FAQ</a>
+                    <a href id = "streamingTab" src = "#">FAQ</a>
+                    
                 </nav>
                 <span id = "sideMenu" onclick="openNav()">&#9776;</span>
 
