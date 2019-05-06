@@ -10,7 +10,6 @@
         <script type="text/javascript" src="js/profilePage.js"></script>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <meta name="google-signin-client_id" content="771332740040-bst02ajh5o98uga1dk3e36sv30pjknuh.apps.googleusercontent.com">
-        <div class="g-signin2"></div>
     </head>
     <body>
         
@@ -46,5 +45,6 @@
     		
     </body>
     
+    <div class="g-signin2" style = "visibility:hidden"></div>
         
 </html>
