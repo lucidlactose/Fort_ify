@@ -5,7 +5,7 @@
 
     1. playername is passed as the string of the player you want to find
     2. platform: "epic", "psn", "xbl"
-    3. console: "ps4", "xb1")
+    3. console: "ps4", "xb1"
     4. game: "fortnite", "csgo", "r6seige" 
     
     if not using platform="epic" & console=null, duplicates appear, sometimes in order,
@@ -44,6 +44,32 @@ $(function() {
     // Scout.players.search("Ninja", "psn", null, "fortnite")
     //     .then(search => Scout.players.get("fortnite", search.results[0].player.playerId))
     //     .then(ninja => console.log(ninja))
+    
+    username = GetParameterValues('username').split("+").join(" ");
+    // console.log("Hello: " + name);
+    Scout.players.search(username, "epic", null, "fortnite")
+        .then(search => Scout.players.get("fortnite", search.results[0].player.playerId))
+        .then(results => showStats(results))
+    
+    
+    function showStats(results) {
+        $("#wins").html(results);
+        
+        
+        console.log(results)
+    }
+    
+    function GetParameterValues(parameter) {
+        url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');  
+        
+        for (var i=0; i < url.length; i++) {
+            urlParameter = url[i].split('=');
+            
+            if (urlParameter[0] === parameter) {
+                return urlParameter[1];
+            }  
+        }  
+    }
     
 });
 
