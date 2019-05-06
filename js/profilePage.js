@@ -14,8 +14,7 @@
 
 $(function() {
     
-    console.log("asdf");
-    
+
 });
 function signOut() {
     

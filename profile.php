@@ -31,9 +31,9 @@
                 <input type="text" placeholder="Enter your Epic Games username..." data-username="{{result['username']}}" name="search" id = "searchQ">
                 <button type="button" id ="searchButton"><i class="fa fa-search"></i></button>
                 <nav>
-                    <a href id = "rankingsTab"src = "index.php">Rankings</a>
-                    <a href id = "newsTab" src = "index.php">News</a>
-                    <a href id = "streamingTab" src = "#">FAQ</a>
+                    <a href = "groupStats.php" id = "rankingsTab"src = "index.php">Rankings</a>
+                    <a href = "#" id = "newsTab" src = "index.php">News</a>
+                    <a href = "#" id = "streamingTab" src = "#">FAQ</a>
                     
                 </nav>
                 <span id = "sideMenu" onclick="openNav()">&#9776;</span>
@@ -44,7 +44,6 @@
         
     		
     </body>
-    
     <div class="g-signin2" style = "visibility:hidden"></div>
         
 </html>

@@ -10,13 +10,19 @@
         <script type="text/javascript" src="js/homePage.js"></script>
         <script type="text/javascript" src="js/everyPage.js"></script>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
-        
         <meta name="google-signin-client_id" content="771332740040-bst02ajh5o98uga1dk3e36sv30pjknuh.apps.googleusercontent.com">
     </head>
     
 	<body>
 		
 		<header>
+			<div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">My Stats</a>
+                <a href="#">Following</a>
+                <a href="#">Followers</a>
+                <a href="fortHome.php" onclick="signOut()">Sign Out</a>
+            </div>
 			<form class="navigationBar">
 				<div id = "logo">
 					<h3 style = "color:white;">Fort-ify</h3>
@@ -30,8 +36,8 @@
 					<a href id = "rankingsTab"src = "index.php">Rankings</a>
 					<a href id = "newsTab" src = "index.php">News</a>
 					<a href id = "streamingTab" src = "index.php">Streaming</a>
-					<a href id = "faqTab" src = "index.php">FAQ</a>
 				</nav>
+				<span id = "sideMenu" onclick="openNav()">&#9776;</span>
 			</form>
 		</header>
 		<div id = "playerstats">
@@ -93,5 +99,6 @@
 		</div>
 			
 </body>
-		
+<div class="g-signin2" style = "visibility:hidden"></div>
+	
 </html>
