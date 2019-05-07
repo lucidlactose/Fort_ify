@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
         <title> Player </title>
-        <!--<meta charset="utf-8">-->
+        <meta charset="utf-8">
         <!--our stylesheets-->
         <link href="css/searchResults.css" rel="stylesheet" type="text/css"/>
         <link href="css/styles.css" rel="stylesheet" type="text/css"/>
@@ -21,6 +21,7 @@
     </head>
     
 	<body>
+	    <div id="profile-id"></div>
 		<header>
 		    <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -50,11 +51,11 @@
         
         <div class= "player-box">
 		    <div class="player-specifics">
-		        <div id="profile-pic"> <img src="#" alt="profilePic"> </div>
+		        <div id="profile-pic"> <img src="#" alt=" "> </div>
 		        <div id="profile-name"> playerName </div>
 		        <button id="follow-button" name="follow" class="btn btn-success">+</button>
-		        <!--<button type="button" class="btn btn-success">Success</button>-->
-		        <button id="refresh-button">  <img src="img/refreshImg.png" alt="refresh"> </button>
+		        <button id="unfollow-button" name="unfollow" class="btn btn-success">-</button>
+		        <button id="refresh-button" name="refresh"class="btn btn-success"><i class="fas fa-sync"></i></button>
 		    </div>
 		    
 		    <div class="stats">

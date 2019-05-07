@@ -39,6 +39,7 @@ $(function() {
     // if the search found something, then the showMeta will show text and then
     // it will fill in the stats later
     Scout.players.search(username, "epic", null, "fortnite")
+        // .then(results => console.log(results))
         .then(results => showMeta(results))
 
     function showMeta(results) {
@@ -50,8 +51,7 @@ $(function() {
         console.log(results)
         $("#profile-pic").attr("src", results.persona.pictureUrl);
         $("#profile-name").html(results.player.handle);
-        // $("#player-id").html(results.player.playerId);
-
+        $("#profile-id").html(results.player.playerId);
         
         Scout.players.search(username, "epic", null, "fortnite")
             .then(search => Scout.players.get("fortnite", search.results[0].player.playerId))
