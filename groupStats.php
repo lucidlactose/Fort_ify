@@ -18,6 +18,13 @@
     
 	<body>
 		<header>
+			<div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="profile.php">My Stats</a>
+                <a href="#">Following</a>
+                <a href="#">Followers</a>
+                <a href="fortHome.php" onclick="signOut()">Sign Out</a>
+            </div>
             <form class="navigationBar">
                 <div id = "logo">
                     <h3 style = "color:white;">Fort-ify</h3>
@@ -32,7 +39,7 @@
                     <a href id = "newsTab" src = "index.php">News</a>
                     <a href id = "streamingTab" src = "index.php">Streaming</a>
                 </nav>
-                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                <span id = "sideMenu" onclick="openNav()">&#9776;</span>
             </form>
         </header>
 		<div id = "playerstats">
@@ -249,5 +256,5 @@ function drawChart3() {
 }
 </script>
 
-	
+    <div class="g-signin2" style = "visibility:hidden"></div>
 </html>
