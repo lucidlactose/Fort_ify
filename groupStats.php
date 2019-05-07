@@ -18,23 +18,23 @@
     
 	<body>
 		<header>
-			<form class="navigationBar">
-				<div id = "logo">
-					<h3 style = "color:white;">Fort-ify</h3>
-				</div>
-				<button type = "button" id="ps4Tab" >PS4</button>
-				<button type = "button" id="xbxTab" >XBX</button>
-				<button type = "button" id="pcTab" >PC</button>
-				<input type="text" placeholder="Enter your Epic Games username..." name="search" id = "searchQ">
-				<button type="button" id ="searchButton"><i class="fa fa-search"></i></button>
-				<nav>
-					<a href id = "rankingsTab"src = "index.php">Rankings</a>
-					<a href id = "newsTab" src = "index.php">News</a>
-					<a href id = "streamingTab" src = "index.php">Streaming</a>
-					<a href id = "faqTab" src = "index.php">FAQ</a>
-				</nav>
-			</form>
-		</header>
+            <form class="navigationBar">
+                <div id = "logo">
+                    <h3 style = "color:white;">Fort-ify</h3>
+                </div>
+                <button type = "button" id="ps4Tab" ><i class="fab fa-playstation"></i></button>
+                <button type = "button" id="xbxTab" ><i class="fab fa-xbox"></i></button>
+                <button type = "button" id="pcTab" ><i class="fab fa-windows"></i></button>
+                <input type="text" placeholder="Enter your Epic Games username..." data-username="{{result['username']}}" name="search" id = "searchQ">
+                <button type="button" id ="searchButton"><i class="fa fa-search"></i></button>
+                <nav>
+                    <a href id = "rankingsTab"src = "index.php">Rankings</a>
+                    <a href id = "newsTab" src = "index.php">News</a>
+                    <a href id = "streamingTab" src = "index.php">Streaming</a>
+                </nav>
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            </form>
+        </header>
 		<div id = "playerstats">
 			<table id = "myStatsTable">
 				<tr>
