@@ -4,6 +4,7 @@
         <title> Player </title>
         <meta charset="utf-8">
         <!--our stylesheets-->
+        
         <link href="css/searchResults.css" rel="stylesheet" type="text/css"/>
         <link href="css/styles.css" rel="stylesheet" type="text/css"/>
             <!--someone else crud-->
@@ -16,7 +17,8 @@
         
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <meta name="google-signin-client_id" content="771332740040-bst02ajh5o98uga1dk3e36sv30pjknuh.apps.googleusercontent.com">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
 
     </head>
     
@@ -43,7 +45,7 @@
                     <a href id = "rankingsTab"src = "index.php">Rankings</a>
                     <a href id = "newsTab" src = "index.php">News</a>
                     <a href id = "streamingTab" src = "index.php">Streaming</a>
-                    <a href id = "faqTab" src = "index.php">FAQ</a>
+                    
                 </nav>
                 <span id = "sideMenu" onclick="openNav()">&#9776;</span>
             </form>

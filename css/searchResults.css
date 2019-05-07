@@ -29,7 +29,17 @@
     text-align: center;
     font-size: 2rem;
 }
-#stat button {
+#follow-button,#unfollow-button,#refresh-button{
+    border: 1px solid green;
+    text-align: center;
+    height: 40px;
+    font-size: 1.5rem;
+    background-color: #afa;
+}
+#follow-button:hover,#unfollow-button:hover,#refresh-button:hover{
+    background-color: grey;
+}
+#stat button{
     border: 1px solid green;
     text-align: center;
     height: 40px;
