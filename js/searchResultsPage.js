@@ -32,7 +32,7 @@
     ************************************ PERSONA IS FOR CONSOLE ONLY  ******************
     
 */
-
+var myId;
 $(function() {
     username = GetParameterValues('username').split("+").join(" ");
 
@@ -78,7 +78,44 @@ $(function() {
         }  
     }
     
+    
+    $("#follow-button").on("click", function() {
+
+        collectData();
+        
+        $.ajax({
+            url: "API/followPlayer.php",
+            type: "POST",
+            data: {
+                "me" : profile.getId(), //somethign
+                "them": $("#profile-id").html()
+            },
+            dataType: "text",
+            success: function(data, status) {
+                console.log("success")
+                console.log(data)
+            },
+            complete: function(data, status) {
+                console.log(data)
+            }
+        });
+    });
+    
+    
+    
+    
+    
+    
 });
+function collectData(){
+    // var auth2 = gapi.auth2.getAuthInstance();
+    if(gapi.auth2.init().isSignedIn().get()){
+        var profile = auth2.getCurrentUser.get().getBasicProfile();
+        console.log("ID: " + profile.getId());
+        myId = profile.getId();
+    }    
+    
+}
 function signOut() {
     
     var auth2 = gapi.auth2.getAuthInstance();
