@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-        <title> Fortnite Looker </title>
+        <title>Group Stats</title>
         <!--<link href="css/styles.css" rel="stylesheet" type="text/css"/>-->
         <link href="css/armandostuffIdontwantinmine.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
