@@ -34,6 +34,25 @@ $(function(){
     
     $("#searchButton").on("click", search);
     
+    
+    $("#ps4Tab").on("click",function() {
+        $("#ps4Tab").css("background-color", "#284FBA");
+        $("#xbxTab").css("background-color", "#2196F3");
+        $("#pcTab").css("background-color","#2196F3");
+    });
+    
+    $("#xbxTab").on("click", function() {
+        $("#xbxTab").css("background-color", "#1A8124");
+        $("#ps4Tab").css("background-color", "#2196F3");
+        $("#pcTab").css("background-color","#2196F3");
+    });
+    
+    $("#pcTab").on("click",function(){
+        $("#pcTab").css("background-color","#333333");
+        $("#ps4Tab").css("background-color", "#2196F3");
+        $("#xbxTab").css("background-color", "#2196F3");
+    });
+
 });
 
 $(document).on('keypress', function(e) {
@@ -44,3 +63,4 @@ $(document).on('keypress', function(e) {
         search();
     }
 });
+
