@@ -1,15 +1,16 @@
 <?php
 
-include "../dbConnection.php";
-$conn = getDatabaseConnection("fortnite");
-
-$sql = "DELETE FROM following " .
-        "WHERE follower LIKE :follower " .
-        "AND followee LIKE :followee";
+include "dbConnection.php";
+$conn = getDatabaseConnection();
 
 $np = array();
-$np[":follower"] = $_POST["follower"];
-$np[":followee"] = $_POST["followee"];
+$np[":follower"] = $_POST["me"];
+$np[":followee"] = $_POST["them"];
+
+$sql = "DELETE FROM following " .
+        "WHERE user_id LIKE :follower " .
+        "AND following_id LIKE :followee";
+
 
 $stmt = $conn->prepare($sql);
 $stmt->execute($np);

@@ -1,19 +1,18 @@
 <?php
-
-function getDatabaseConnection($dbname = "ottermart") {
-    //C9 db info
+function getDatabaseConnection($dbname = "fortifyDB") {
+    
     $host = "localhost";
-    $username = "root";
+    $username = "enriquemosqueda";
     $password = "";
     
     //when connecting from Heroku
-    if  (strpos($_SERVER['HTTP_HOST'], 'herokuapp') !== false) {
-        $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-        $host = $url["host"];
-        $dbname = substr($url["path"], 1);
-        $username = $url["user"];
-        $password = $url["pass"];
-    }
+    // if  (strpos($_SERVER['HTTP_HOST'], 'herokuapp') !== false) {
+    //     $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+    //     $host = $url["host"];
+    //     $dbname = substr($url["path"], 1);
+    //     $username = $url["user"];
+    //     $password = $url["pass"];
+    // }
     
     $dbConn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     $dbConn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

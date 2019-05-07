@@ -18,8 +18,8 @@
         <script type="text/javascript" src="js/profilePage.js"></script>
         <script type="text/javascript" src="js/homePage.js"></script>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
-        <meta name="google-signin-client_id" content="383699114464-7kbvt4bcr25muoods8eargemgq3e46ro.apps.googleusercontent.com">
-        <!--<meta name="google-signin-client_id" content="771332740040-bst02ajh5o98uga1dk3e36sv30pjknuh.apps.googleusercontent.com">-->
+        <!--<meta name="google-signin-client_id" content="383699114464-7kbvt4bcr25muoods8eargemgq3e46ro.apps.googleusercontent.com">-->
+        <meta name="google-signin-client_id" content="771332740040-bst02ajh5o98uga1dk3e36sv30pjknuh.apps.googleusercontent.com">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 

@@ -1,14 +1,14 @@
 <?php
 
-include "../dbConnection.php";
-$conn = getDatabaseConnection("fortnite");
-
-$sql = "INSERT INTO following (follower_username, followee_username) ".
-        "VALUES (:follower, :followee)";
+include "dbConnection.php";
+$conn = getDatabaseConnection();
 
 $np = array();
-$np[":follower"] = $_POST["follower"];
-$np[":followee"] = $_POST["followee"];
+$np[":follower"] = $_POST["me"];
+$np[":followee"] = $_POST["them"];
+
+$sql = "INSERT INTO following (user_id, following_id) ".
+        "VALUES (:follower, :followee)";
 
 $stmt = $conn->prepare($sql);
 $stmt->execute($np);
