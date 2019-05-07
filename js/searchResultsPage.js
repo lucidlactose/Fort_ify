@@ -33,38 +33,45 @@
     
 */
 
-
 $(function() {
-    console.log("search: ")
-    // Scout.players.search("Ninja", "psn", "ps4", "fortnite")
-        // .then(search => Scout.players.get("fortnite", search.results[0].player.playerId))
-        // .then(ninja => console.log(ninja))
-    // Scout.titles.list().then(titles => console.log(titles))
-
-    // Scout.players.search("Ninja", "psn", null, "fortnite")
-    //     .then(search => Scout.players.get("fortnite", search.results[0].player.playerId))
-    //     .then(ninja => console.log(ninja))
-    
     username = GetParameterValues('username').split("+").join(" ");
-    // console.log("Hello: " + name);
+
+    // if the search found something, then the showMeta will show text and then
+    // it will fill in the stats later
     Scout.players.search(username, "epic", null, "fortnite")
-        .then(search => Scout.players.get("fortnite", search.results[0].player.playerId))
-        .then(results => showStats(results))
-    
+        .then(results => showMeta(results))
+
+    function showMeta(results) {
+        console.log(results)
+        if (results.length == 0) {
+            
+        }
+        results = results.results[0];
+        console.log(results)
+        $("#profile-pic").attr("src", results.persona.pictureUrl);
+        $("#profile-name").html(results.player.handle);
+        // $("#player-id").html(results.player.playerId);
+
+        
+        Scout.players.search(username, "epic", null, "fortnite")
+            .then(search => Scout.players.get("fortnite", search.results[0].player.playerId))
+            .then(results => showStats(results))
+    }
     
     function showStats(results) {
-        $("#wins").html(results);
-        
+        $("#kills").html("Kills: " + results.stats[0].displayValue);
+        $("#score").html("Score: " + results.stats[1].displayValue);
+        $("#matchesPlayed").html("Matches played: " + results.stats[3].displayValue);
+        $("#wins").html("Wins: " + results.stats[5].displayValue);
+        $("#kd").html("K/D: " + results.stats[10].displayValue);
         
         console.log(results)
     }
     
     function GetParameterValues(parameter) {
         url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');  
-        
         for (var i=0; i < url.length; i++) {
             urlParameter = url[i].split('=');
-            
             if (urlParameter[0] === parameter) {
                 return urlParameter[1];
             }  
@@ -72,7 +79,6 @@ $(function() {
     }
     
 });
-
 function signOut() {
     
     var auth2 = gapi.auth2.getAuthInstance();

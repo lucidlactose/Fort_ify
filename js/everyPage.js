@@ -19,7 +19,6 @@ function search() {
         for (i=0; i<username.length; ++i) {
             if (username !== "+") {
                 console.log(username);
-                // Scout.titles.list().then(titles => console.log(titles));
                 window.location.href = "searchResults.php?username=" + username;
             }    
         }

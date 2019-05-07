@@ -2,14 +2,14 @@
 <html lang="en">
 	<head>
         <title> Player </title>
-        <meta charset="utf-8">
+        <!--<meta charset="utf-8">-->
         <!--our stylesheets-->
         <link href="css/searchResults.css" rel="stylesheet" type="text/css"/>
         <link href="css/styles.css" rel="stylesheet" type="text/css"/>
             <!--someone else crud-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!--<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>-->
-        <!--<script src="https://sdk.scoutsdk.com/1.0.0/js/Scout.js"></script>-->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://sdk.scoutsdk.com/1.0.0/js/Scout.js"></script>
             <!--our webpage javascript-->
         <script type="text/javascript" src="js/everyPage.js"></script>
         <script type="text/javascript" src="js/searchResultsPage.js"></script>
@@ -46,10 +46,10 @@
             </form>
         </header>
         
-		<div class= "player-box">
+        <div class= "player-box">
 		    <div class="player-specifics">
 		        <div id="profile-pic"> <img src="#" alt="profilePic"> </div>
-		        <div id="player-name"> playerName </div>
+		        <div id="profile-name"> playerName </div>
 		        <button id="follow-button" name="follow"> <img src="img/followImg.png" alt="+"> </button>
 		        <button id="refresh-button">  <img src="img/refreshImg.png" alt="refresh"> </button>
 		    </div>
@@ -65,16 +65,17 @@
 		    <div class="stats">
 	            <span id="stat-header">Stats: </span>
 	            <span id="stat"> <button> WINS     </button> </span>
-		        <!--<div id="stat"> <button> score    </button> </div>-->
                 <span id="stat"> <button> SCORE    </button> </span>
 		        <span id="stat"> <button> WINRATE  </button> </span>
 		        <span id="stat"> <button> KILLS    </button> </span>
 		        <span id="stat"> <button> K/D      </button> </span>        
 		    </div>
+		    
 	        <div class="current-stat">
 		        <div id="wins"> Here are my amount of wins. Maybe you can help increase it ;) </div>
 		        <div id="score"> Here's my score: </div>
 		        <div id="kd"> My k/d... ik im not that good... maybe... you can help ;> </div>
+		        <div id="matchesPlayed"> I wish could play more.... with youuu </div>
 		        <div id="kills"> kills: </div>
 	        </div>    
 		</div>

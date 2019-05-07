@@ -13,6 +13,7 @@
         <link href="css/styles.css" rel="stylesheet" type="text/css" />
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://sdk.scoutsdk.com/1.0.0/js/Scout.js"></script>
+        <script type="text/javascript" src="js/everyPage.js"></script>
         <script type="text/javascript" src="js/profilePage.js"></script>
         <script type="text/javascript" src="js/homePage.js"></script>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
