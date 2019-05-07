@@ -18,7 +18,9 @@
         <script type="text/javascript" src="js/homePage.js"></script>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <meta name="google-signin-client_id" content="771332740040-bst02ajh5o98uga1dk3e36sv30pjknuh.apps.googleusercontent.com">
-        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
     </head>
     <body>
         
@@ -27,9 +29,9 @@
                 <div id = "logo">
                     <h3 style = "color:white;">Fort-ify</h3>
                 </div>
-                <button type = "button" id="ps4Tab" >PS4</button>
-                <button type = "button" id="xbxTab" >XBX</button>
-                <button type = "button" id="pcTab" >PC</button>
+                <button type = "button" id="ps4Tab" ><i class="fab fa-playstation"></i></button>
+                <button type = "button" id="xbxTab" ><i class="fab fa-xbox"></i></button>
+                <button type = "button" id="pcTab" ><i class="fab fa-windows"></i></button>
                 <input type="text" placeholder="Enter your Epic Games username..." data-username="{{result['username']}}" name="search" id = "searchQ">
                 <button type="button" id ="searchButton"><i class="fa fa-search"></i></button>
                 <nav>

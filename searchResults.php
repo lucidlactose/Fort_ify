@@ -31,9 +31,9 @@
                 <div id = "logo">
                     <h3 style = "color:white;">Fort-ify</h3>
                 </div>
-                <button type = "button" id="ps4Tab" >PS4</button>
-                <button type = "button" id="xbxTab" >XBX</button>
-                <button type = "button" id="pcTab" >PC</button>
+                <button type = "button" id="ps4Tab" ><i class="fab fa-playstation"></i></button>
+                <button type = "button" id="xbxTab" ><i class="fab fa-xbox"></i></button>
+                <button type = "button" id="pcTab" ><i class="fab fa-windows"></i></button>
                 <input type="text" placeholder="Enter your Epic Games username..." data-username="{{result['username']}}" name="search" id = "searchQ">
                 <button type="button" id ="searchButton"><i class="fa fa-search"></i></button>
                 <nav>
