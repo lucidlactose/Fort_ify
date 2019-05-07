@@ -1,9 +1,10 @@
-// <?php
+<!-- <?php
 
 //     $url = "https://localhost/searchResults.php";
 //     $queryString = http_build_query("username"=>username);
 
-// ?>
+// ?> 
+-->
 
 <!DOCTYPE html>
 <html>
