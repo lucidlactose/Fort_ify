@@ -1,3 +1,4 @@
+<?php
 
 // Set the API key for my test account
 $apiKey = "BQAdb36wnBSvx0vNHQ8xdmuxy5kdfgdJHauf4OmYoIekHlo5uG3K_XFXQPyY5nax5e6CTJUDhuKTL2m84-aTQYvXkEjMCMCt8zIpKriekDrB571834tPeVsiVHXrnhaHUSlQE-oe_TqiVRHuCq6jYGRJ-9NQ54q8P1UMwUEVbSi-gCVooWvLiXaWVLYR71ejwX8XN71TzclzhbxaHSULms-PVSuhNEmTUueTUxktjX2n";
