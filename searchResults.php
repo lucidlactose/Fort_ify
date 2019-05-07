@@ -28,7 +28,7 @@
 		    <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="profile.php">My Stats</a>
-                <a href="#">Following</a>
+                <a href="following.php">Following</a>
                 <a href="#">Followers</a>
                 <a href="fortHome.php" onclick="signOut()">Sign Out</a>
             </div>
