@@ -177,7 +177,7 @@ table {
 /**************************************************/
 /*************RANKING BY KILLS TABLE**************/
 .limiter2{
-	width: 1366px;
+	width: 500px;
 	margin: 0 auto;
 }
 
@@ -213,7 +213,7 @@ table {
 /**************************************************/
 /*************THE USERS INFORMATION TABLE**************/
 .limiter3{
-	width: 1366px;
+	width: 500px;
 	margin: 0 auto;
 }
 
@@ -249,7 +249,8 @@ table {
 /**************************************************/
 /*************THE USERS INFORMATION TABLE**************/
 .limiter4{
-	width: 1366px;
+	
+	width: 500px;
 	margin: 0 auto;
 }
 
@@ -283,6 +284,7 @@ table {
 	background-color: #642EFE;
 }
 /**************************************************/
+
 
 #mystatimgtd{
 	border-style: solid;
@@ -337,11 +339,22 @@ table {
 	margin-left: 400px;
 }
 
-#piechart{
-	margin-left: -200px;
-	margin-top:-70px;
+/*		NEW CSS */
+#piechart1{
+	margin-top:-200px;
+	margin-left: 400px;
+	
 }
-#allstats{
-	display: flex;
-	flex-direction: column;
+#piechart2{
+	margin-top:-200px;
+	margin-left: 400px;
+	
+}
+#piechart3{
+	margin-top:-200px;
+	margin-left: 400px;
+}
+
+h1{
+	text-align: center;
 }

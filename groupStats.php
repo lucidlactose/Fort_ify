@@ -9,6 +9,8 @@
         <script src="https://sdk.scoutsdk.com/1.0.0/js/Scout.js"></script>
         <script type="text/javascript" src="js/homePage.js"></script>
         <script type="text/javascript" src="js/everyPage.js"></script>
+        <script type="text/javascript" src="js/groupStats.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <meta name="google-signin-client_id" content="771332740040-bst02ajh5o98uga1dk3e36sv30pjknuh.apps.googleusercontent.com">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -89,7 +91,7 @@
 		<b style="margin-left: 500px; font-size: 50px;">Team stats</b>
 		<div id= "everyonesStats">
 			<div id = "killsDiv">
-				<h1>Ranking by Kills</h1>
+				<h1>Rank by K/D</h1>
 				<div class="limiter2">
 					<div class="wrap2">
 						<div class="table2 ver1 m-b-110">
@@ -109,29 +111,15 @@
 											<td class="column21">Win Rates:</td>
 											<td class="column22">51/1460</td>
 										</tr>
-										<tr>
-											<td class="column21">Top 1:</td>
-											<td class="column22">3244</td>
-										</tr>
-										<tr>
-											<td class="column21">Top 25:</td>
-											<td class="column22">1704/1409</td>
-										</tr>
-										<tr>
-											<td class="column21">Players outlived</td>
-											<td class="column22">1704/1409</td>
-										</tr>
-										<tr>
-											<td class="column21">Time played:</td>
-											<td class="column22">1704/1409</td>
-										</tr>
 									</tbody>
 								</table>
 							</div>
 						</div>
 					</div>
+					<div id="piechart1"></div>
 				</div>
 			</div>
+
 			<div id = "topOneDiv">
 				<h1>Ranking by Top 1 </h1>
 				<div class="limiter3">
@@ -158,8 +146,10 @@
 							</div>
 						</div>
 					</div>
+					<div id="piechart2"></div>
 				</div>
 			</div>
+			
 			<div id = "kdDiv">
 				<h1>Rank by K/D</h1>
 				<div class="limiter4">
@@ -186,6 +176,7 @@
 							</div>
 						</div>
 					</div>
+					<div id="piechart3"></div>
 				</div>
 			</div>
 			<div id = "comparewithteammate">
@@ -197,6 +188,66 @@
 		</div>
 		
 	</body>
-<div class="g-signin2" style = "visibility:hidden"></div>
+	<div class="g-signin2" style = "visibility:hidden"></div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+	// Load google charts
+//GET THE FIRST PIECHART (PIECHART1)
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart1);
+
+// Draw the chart and set the chart values
+function drawChart1() {
+	var data = google.visualization.arrayToDataTable([
+	['Task', 'Hours per Day'],
+	['Team', 8],
+	['You', 2]
+	]);
+
+	// Optional; add a title and set the width and height of the chart
+	var options = {'title':'My Stats vs My Followers', 'width':300, 'height':300,backgroundColor: 'transparent',is3D: true};
+
+	// Display the chart inside the <div> element with id="piechart"
+	var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
+	chart.draw(data, options);
+}
+
+//GET THE SECOND PIECHART (PIECHART2)
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart2);
+function drawChart2() {
+	var data = google.visualization.arrayToDataTable([
+	['Task', 'Hours per Day'],
+	['Team', 8],
+	['You', 2]
+	]);
+
+	// Optional; add a title and set the width and height of the chart
+	var options = {'title':'My Stats vs My Followers', 'width':300, 'height':300,backgroundColor: 'transparent',is3D: true};
+
+	// Display the chart inside the <div> element with id="piechart"
+	var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+	chart.draw(data, options);
+}
+
+//GET THE SECOND PIECHART (PIECHART3)
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart3);
+function drawChart3() {
+	var data = google.visualization.arrayToDataTable([
+	['Task', 'Hours per Day'],
+	['Team', 8],
+	['You', 2]
+	]);
+
+	// Optional; add a title and set the width and height of the chart
+	var options = {'title':'My Stats vs My Followers', 'width':300, 'height':300,backgroundColor: 'transparent',is3D: true};
+
+	// Display the chart inside the <div> element with id="piechart"
+	var chart = new google.visualization.PieChart(document.getElementById('piechart3'));
+	chart.draw(data, options);
+}
+</script>
+
 	
 </html>
