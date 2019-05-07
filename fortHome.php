@@ -118,10 +118,7 @@
     				<br>
     			</div>
     		</div>
-    		<a href="#" onclick="signOut()">Sign out</a>
-        
-        
-    	
+
         </body>
         
 </html>
