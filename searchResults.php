@@ -64,11 +64,11 @@
 		        <button id="unfollow-button" name="unfollow" class="btn btn-success">-</button>
 		        <button id="refresh-button" name="refresh"class="btn btn-success"><i class="fas fa-sync"></i></button>
 		        </div>
-		        <div id="wins"> Here are my amount of wins. Maybe you can help increase it ;) </div>
-		        <div id="score"> Here's my score: </div>
-		        <div id="kd"> My k/d... ik im not that good... maybe... you can help ;> </div>
-		        <div id="matchesPlayed"> I wish could play more.... with youuu </div>
-		        <div id="kills"> kills: </div>
+		        <div id="wins"></div>
+		        <div id="score"></div>
+		        <div id="kd"></div>
+		        <div id="matchesPlayed"></div>
+		        <div id="kills"></div>
 	        </div>    
 		</div>
 		
