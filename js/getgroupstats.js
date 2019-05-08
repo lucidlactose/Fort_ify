@@ -2,7 +2,7 @@
 //GET THE FIRST PIECHART (PIECHART1)
 
 $(function() {
-    
+
     //************************************************************
     //*********     THIS PART DISPLAYS THE TOP 1 STATS   *********
     //************************************************************
@@ -17,12 +17,13 @@ $(function() {
         
     	$.ajax({
             url:"API/getAllFollowingStats.php",
-            type: "POST",
+            type: "GET",
             dataType:"json",
             data:{
                 "id":"108544729482107417556"
             },
             success:function(data,status){
+                console.log(data);
                 for(var i = 0; i<data.length; i++){
                     var one = String(data[i]['username']);
                     var two = parseInt(data[i]['place_top1']);
@@ -69,7 +70,7 @@ $(function() {
         
     	$.ajax({
             url:"API/getAllFollowingStats.php",
-            type: "POST",
+            type: "GET",
             dataType:"json",
             data:{
                 "id":"108544729482107417556"
@@ -118,13 +119,12 @@ $(function() {
         finishArr[0] = ["Username", "Stats"];
         $.ajax({
             url:"API/getAllFollowingStats.php",
-            type: "POST",
+            type: "GET",
             dataType:"json",
             data:{
                 "id":"108544729482107417556"
             },
             success:function(data,status){
-                console.log(data);
                 for(var i = 0; i<data.length; i++){
                     var one = String(data[i]['username']);
                     var two = parseFloat(data[i]['kill_death_ratio']);
