@@ -1,14 +1,14 @@
 <?php
 
-include "../dbConnection.php";
-$conn = getDatabaseConnection("fortnite");
-
-$sql = "SELECT * ".
-        "FROM following ".
-        "WHERE following_id LIKE :follower";
+include "dbConnection.php";
+$conn = getDatabaseConnection();
 
 $np = array();
 $np[":follower"] = $_POST["follower"];
+
+$sql = "SELECT * ".
+        "FROM following ";
+
 
 $stmt = $conn->prepare($sql);
 $stmt->execute($np);
