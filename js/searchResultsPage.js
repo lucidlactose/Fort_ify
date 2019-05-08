@@ -44,16 +44,28 @@ $(function() {
 
 	function showMeta(results) {
 		console.log(results)
-		if (results.length == 0) {
-			
+		if (results.length === 0) {
+			return;
 		}
-		results = results.results[0];
+		
+		var found = false;
+		for (var i=0; i < results.results.length; ++i) {
+			console.log(results.results[i].player.handle)
+			if (results.results[i].player.handle.toUpperCase() === username.toUpperCase()) {
+				results = results.results[i];
+				found = true;
+				break;
+			}
+		}
+		if (!found) {
+			results = results.results[0];
+		}
 		console.log(results)
 		$("#profile-pic").attr("src", results.persona.pictureUrl);
 		$("#profile-name").html(results.player.handle);
 		$("#profile-id").html(results.player.playerId);
 		
-		Scout.players.search(username, "epic", null, "fortnite")
+		Scout.players.search($("#profile-id").html(), "epic", null, "fortnite")
 			.then(search => Scout.players.get("fortnite", search.results[0].player.playerId))
 			.then(results => showStats(results))
 	}
