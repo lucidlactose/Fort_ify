@@ -98,26 +98,14 @@
 		<b style="margin-left: 500px; font-size: 50px;">Team stats</b>
 		<div id= "everyonesStats">
 			<div id = "killsDiv">
-				<h1>Rank by K/D</h1>
+				<h1>Rank by Kills</h1>
 				<div class="limiter2">
 					<div class="wrap2">
 						<div class="table2 ver1 m-b-110">
 							<div class="table2-body js-pscroll">
 								<table>
-									<tbody>
-										<tr>
-											<td class="column21">K/D</td>
-											<td class="column22">1704/1409</td>
-										</tr>
-
-										<tr>
-											<td class="column21">Kills</td>
-											<td class="column22">5073</td>
-										</tr>
-										<tr>
-											<td class="column21">Win Rates:</td>
-											<td class="column22">51/1460</td>
-										</tr>
+									<tbody id = "tableBody2">
+				
 									</tbody>
 								</table>
 							</div>
@@ -128,26 +116,14 @@
 			</div>
 
 			<div id = "topOneDiv">
-				<h1>Ranking by Top 1 </h1>
+				<h1>Ranking by Wins </h1>
 				<div class="limiter3">
 					<div class="wrap3">
 						<div class="table3 ver1 m-b-110">
 							<div class="table3-body js-pscroll">
 								<table>
-									<tbody>
-										<tr>
-											<td class="column31">K/D</td>
-											<td class="column32">1704/1409</td>
-										</tr>
-
-										<tr>
-											<td class="column31">Kills</td>
-											<td class="column32">5073</td>
-										</tr>
-										<tr>
-											<td class="column31">Win Rates:</td>
-											<td class="column32">51/1460</td>
-										</tr>
+									<tbody id = "tableBody3">
+										
 									</tbody>
 								</table>
 							</div>
@@ -164,20 +140,8 @@
 						<div class="table4 ver1 m-b-110">
 							<div class="table4-body js-pscroll">
 								<table>
-									<tbody>
-										<tr>
-											<td class="column41">K/D</td>
-											<td class="column42">1704/1409</td>
-										</tr>
-
-										<tr>
-											<td class="column41">Kills</td>
-											<td class="column42">5073</td>
-										</tr>
-										<tr>
-											<td class="column41">Win Rates:</td>
-											<td class="column42">51/1460</td>
-										</tr>
+									<tbody id = "tableBody4">
+										
 									</tbody>
 								</table>
 							</div>
