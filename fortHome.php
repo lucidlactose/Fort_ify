@@ -150,12 +150,11 @@
                 </div>
                 
     		</div>
-    			<!--<div id = "upComingItems">-->
-    			<!--    <div class="MagicScroll" data-options="mode: carousel; height: 275px;">-->
-                        
-       <!--             </div>-->
-    			<!--</div>-->
-    			
+    		<div>
+    		    <center>
+    		        
+    		    </center>
+    		</div>
     		<div id="myModal" class="modal">
               <span class="close">&times;</span>
               <img class="modal-content" id="img01">
@@ -163,7 +162,6 @@
         </body>
         <script>
                 function myFunction(imgs) {
-                console.log("my pussy");
                 console.log(imgs);
                 // Get the modal
                 var modal = document.getElementById('myModal');
