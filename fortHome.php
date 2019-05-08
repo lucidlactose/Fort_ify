@@ -150,9 +150,10 @@
                 </div>
                 
     		</div>
-    		<div>
-    		    <center>
-    		        
+    		<div id="bottom">
+    		    <br>
+    		    <center style="margin-top:50px;">
+    		       Enrique Mosqueda Pesqueda Inuega Ortega De La Rosa Martinez Ryan
     		    </center>
     		</div>
     		<div id="myModal" class="modal">
