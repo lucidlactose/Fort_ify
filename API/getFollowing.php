@@ -4,10 +4,11 @@ include "dbConnection.php";
 $conn = getDatabaseConnection();
 
 $np = array();
-$np[":follower"] = $_POST["follower"];
+$np[":follower"] = $_POST["userId"];
 
 $sql = "SELECT * ".
-        "FROM following ";
+        "FROM following " . 
+        "WHERE user_id LIKE :follower";
 
 
 $stmt = $conn->prepare($sql);
