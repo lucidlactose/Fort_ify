@@ -2,7 +2,7 @@
 function getDatabaseConnection($dbname = "fortifyDB") {
     
     $host = "localhost";
-    $username = "enriquemosqueda";
+    $username = "armandomiguel";
     $password = "";
     
     //when connecting from Heroku

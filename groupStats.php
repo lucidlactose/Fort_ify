@@ -9,7 +9,7 @@
         <script src="https://sdk.scoutsdk.com/1.0.0/js/Scout.js"></script>
         <script type="text/javascript" src="js/homePage.js"></script>
         <script type="text/javascript" src="js/everyPage.js"></script>
-        <script type="text/javascript" src="js/groupStats.js"></script>
+        <script type="text/javascript" src="js/getgroupstats.js"></script>
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <meta name="google-signin-client_id" content="771332740040-bst02ajh5o98uga1dk3e36sv30pjknuh.apps.googleusercontent.com">
@@ -196,65 +196,6 @@
 		
 	</body>
 	<div class="g-signin2" style = "visibility:hidden"></div>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-	// Load google charts
-//GET THE FIRST PIECHART (PIECHART1)
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart1);
-
-// Draw the chart and set the chart values
-function drawChart1() {
-	var data = google.visualization.arrayToDataTable([
-	['Task', 'Hours per Day'],
-	['Team', 8],
-	['You', 2]
-	]);
-
-	// Optional; add a title and set the width and height of the chart
-	var options = {'title':'My Stats vs My Followers', 'width':300, 'height':300,backgroundColor: 'transparent',is3D: true};
-
-	// Display the chart inside the <div> element with id="piechart"
-	var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
-	chart.draw(data, options);
-}
-
-//GET THE SECOND PIECHART (PIECHART2)
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart2);
-function drawChart2() {
-	var data = google.visualization.arrayToDataTable([
-	['Task', 'Hours per Day'],
-	['Team', 8],
-	['You', 2]
-	]);
-
-	// Optional; add a title and set the width and height of the chart
-	var options = {'title':'My Stats vs My Followers', 'width':300, 'height':300,backgroundColor: 'transparent',is3D: true};
-
-	// Display the chart inside the <div> element with id="piechart"
-	var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
-	chart.draw(data, options);
-}
-
-//GET THE SECOND PIECHART (PIECHART3)
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart3);
-function drawChart3() {
-	var data = google.visualization.arrayToDataTable([
-	['Task', 'Hours per Day'],
-	['Team', 8],
-	['You', 2]
-	]);
-
-	// Optional; add a title and set the width and height of the chart
-	var options = {'title':'My Stats vs My Followers', 'width':300, 'height':300,backgroundColor: 'transparent',is3D: true};
-
-	// Display the chart inside the <div> element with id="piechart"
-	var chart = new google.visualization.PieChart(document.getElementById('piechart3'));
-	chart.draw(data, options);
-}
-</script>
 
     <div class="g-signin2" style = "visibility:hidden"></div>
 </html>
