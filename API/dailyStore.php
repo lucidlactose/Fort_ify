@@ -1,10 +1,5 @@
 <?php
 
-// Set the API key for my test account
-$apiKey = "BQAdb36wnBSvx0vNHQ8xdmuxy5kdfgdJHauf4OmYoIekHlo5uG3K_XFXQPyY5nax5e6CTJUDhuKTL2m84-aTQYvXkEjMCMCt8zIpKriekDrB571834tPeVsiVHXrnhaHUSlQE-oe_TqiVRHuCq6jYGRJ-9NQ54q8P1UMwUEVbSi-gCVooWvLiXaWVLYR71ejwX8XN71TzclzhbxaHSULms-PVSuhNEmTUueTUxktjX2n";
-$query = "night%20moves";
-$type = "track";
-$market = "US";
 
 // Setup the CURL session
 $cSession = curl_init();
@@ -40,17 +35,13 @@ if ($errno) {
 // Close the session
 curl_close($cSession);
 
-// HintL: it is sometimes helpful to take echo the
-// $results out and copy the array, then paste it into
-// a beautifier online to see the data. For example, you
-// could put the string JSON $results into the site
-// https://codebeautify.org/jsonviewer
 
-// Convert the results to an associative array
-// $data = json_decode($results);
-
-echo $results;
-// Let's just get one of the items and echo the JSON for that only.
-// echo json_encode($data);
-
+// json_encode($results);
+// $results = ($results);
+$results = json_decode($results,true);
+for($i = 0; $i < 10; $i++){
+$data = json_encode($results['items'][$i]["item"]["images"]["information"]);
+echo $data;
+echo "<img src=" . $data . "/>";
+}
 ?>
