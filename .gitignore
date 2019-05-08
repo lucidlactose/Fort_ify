@@ -1,2 +1,2 @@
 API/dbConnection.php
-php_errors.log
+*.log
