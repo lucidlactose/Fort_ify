@@ -4,6 +4,7 @@
         <title> Profile </title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <link href="css/following.css" rel="stylesheet" type="text/css" />
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://sdk.scoutsdk.com/1.0.0/js/Scout.js"></script>
         <script type="text/javascript" src="js/everyPage.js"></script>
@@ -12,6 +13,7 @@
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <meta name="google-signin-client_id" content="771332740040-bst02ajh5o98uga1dk3e36sv30pjknuh.apps.googleusercontent.com">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        
                 
         
 
@@ -44,7 +46,20 @@
 
             </form>
         </header>
-        <div id = "allFollowing"></div>
+        
+        <div id = "dailyItems">
+    		<br>
+    		<table id = "daily">
+    			<tr>
+    				<b id= "sectionTitle">Following</b>
+    			</tr>
+    			<tr>
+    			    <td>
+                        <div id = "allFollowing"></div>				        
+                    </td>
+    			</tr>
+            </table>
+        </div>
     		
     </body>
     <div class="g-signin2" style = "visibility:hidden"></div>

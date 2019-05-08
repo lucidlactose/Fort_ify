@@ -20,9 +20,6 @@ $(function() {
         }
     });
     
-    
-    
-
 	function showMeta(results) {
 		if (results.length === 0) {
 			return;
@@ -44,28 +41,22 @@ $(function() {
 		$("#allFollowing").append(
                 "<center>" 
                 +
-                "<table>"
-                +
-                "<tr>"
-                +
-                "<th>"
-                +
-    		    "<a href = 'searchResults.php?username=" + username +"'>"+ username +"</a>"
-    		    +
-    		    "</th>"
-    		    +
-    		    "</tr>"
-    		    +
-    		    "</table>"
+	                "<div class = 'follower'>"
+	                +
+						
+		    		    "<a href = 'searchResults.php?username=" + username +"'>"+ username +"</a>"
+						+
+						
+						"<hr>"
+						
+	    		    +
+					"</div>"
     		    +
 		        "</center>"
 		    
 		    );
-		
-		
-		
 	}
-    
+
     
      
 });
