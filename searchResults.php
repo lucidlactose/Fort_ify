@@ -61,14 +61,6 @@
 		    </div>
 		    
 		    <div class="stats">
-	            <span id="stat-header">Tags: </span>
-	            <span id="stat"> <button> BBC     </button> </span>
-		        <!--<div id="stat"> <button> score    </button> </div>-->
-                <span id="stat"> <button> HARDCORE    </button> </span>
-		        <span id="stat"> <button> BLONDE  </button> </span>   
-		    </div>
-		    
-		    <div class="stats">
 	            <span id="stat-header">Stats: </span>
 	            <span id="stat"> <button> WINS     </button> </span>
                 <span id="stat"> <button> SCORE    </button> </span>

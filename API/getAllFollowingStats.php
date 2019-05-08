@@ -4,7 +4,7 @@ include "dbConnection.php";
 $conn = getDatabaseConnection();
 
 $np = array();
-$np[":user_id"] = $_POST["id"];
+$np[":user_id"] = $_GET["id"];
 
 $sql = "SELECT *
         FROM (
