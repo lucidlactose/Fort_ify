@@ -20,6 +20,9 @@
 #follow-button {
     margin-left: 10%;
 }
+#profile-id {
+    display: none;
+}
 
 .stats {
     display:inline-block;
