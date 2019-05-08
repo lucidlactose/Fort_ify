@@ -52,22 +52,16 @@
         </header>
         
         <div class= "player-box">
-		    <div class="player-specifics">
-		        <div id="profile-pic"> <img src="#" alt=" "> </div>
-		        <div id="profile-name"> playerName </div>
-		        <button id="refresh-button" name="refresh"class="btn btn-success"><i class="fas fa-sync"></i></button>
-		    </div>
-		    
-		    <div class="stats">
-	            <span id="stat-header">Stats: </span>
-	            <span id="stat"> <button> WINS     </button> </span>
-                <span id="stat"> <button> SCORE    </button> </span>
-		        <span id="stat"> <button> WINRATE  </button> </span>
-		        <span id="stat"> <button> KILLS    </button> </span>
-		        <span id="stat"> <button> K/D      </button> </span>        
-		    </div>
+            
 		    
 	        <div class="current-stat">
+	            <div class="player-specifics">
+		        <!--<div id="profile-pic"> <img src="#" alt=" "> </div>-->
+		        <div id="profile-name"> playerName </div>
+		        <button id="follow-button" name="follow" class="btn btn-success">+</button>
+		        <button id="unfollow-button" name="unfollow" class="btn btn-success">-</button>
+		        <button id="refresh-button" name="refresh"class="btn btn-success"><i class="fas fa-sync"></i></button>
+		        </div>
 		        <div id="wins"></div>
 		        <div id="score"></div>
 		        <div id="kd"></div>
