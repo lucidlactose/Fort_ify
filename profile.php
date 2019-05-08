@@ -1,25 +1,33 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title> Profile </title>
+<html lang="en">
+	<head>
+        <title> Player </title>
+        <meta charset="utf-8">
+        <!--our stylesheets-->
+        
+        <link href="css/searchResults.css" rel="stylesheet" type="text/css"/>
+        <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+            <!--someone else crud-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="css/styles.css" rel="stylesheet" type="text/css" />
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://sdk.scoutsdk.com/1.0.0/js/Scout.js"></script>
+            <!--our webpage javascript-->
         <script type="text/javascript" src="js/everyPage.js"></script>
-        <script type="text/javascript" src="js/profilePage.js"></script>
+        <script type="text/javascript" src="js/searchResultsPage.js"></script>
+        
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <meta name="google-signin-client_id" content="771332740040-bst02ajh5o98uga1dk3e36sv30pjknuh.apps.googleusercontent.com">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+
 
     </head>
-    <body>
-        
-        <header>
-            <div id="mySidenav" class="sidenav">
+    
+	<body>
+	    <div id="profile-id"></div>
+		<header>
+		    <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="profile.php">My Stats</a>
+                <a href="profile.php?username=wickyticky">My Stats</a>
                 <a href="following.php">Following</a>
                 <a href="#">Followers</a>
                 <a href="fortHome.php" onclick="signOut()">Sign Out</a>
@@ -35,171 +43,40 @@
                 <button type="button" id ="searchButton"><i class="fa fa-search"></i></button>
                 <nav>
                     <a href = "groupStats.php" id = "rankingsTab"src = "index.php">Rankings</a>
-                    <a href = "#" id = "newsTab" src = "index.php">News</a>
+                    <a href = "news.php" id = "newsTab" src = "index.php">News</a>
                     <a href id = "streamingTab" src = "index.php">Streaming</a>
+                    
                 </nav>
                 <span id = "sideMenu" onclick="openNav()">&#9776;</span>
-
             </form>
         </header>
-        <div id = "playerstats">
-			<table id = "myStatsTable">
-				<tr>
-					<b id= "gamertag">Fduenez</b>
-				</tr>
-				<tr>
-					<td id="mystatimgtd"><img src="img/player3.png"/><td>
-					<td>
-						<div class="limiter1">
-							<div class="wrap1">
-								<div class="table1 ver1 m-b-110">
-									<div class="table1-body js-pscroll">
-										<table>
-											<tbody>
-												<tr>
-													<td class="column11">K/D</td>
-													<td class="column12">1704/1409</td>
-												</tr>
-
-												<tr>
-													<td class="column11">Kills</td>
-													<td class="column12">5073</td>
-												</tr>
-												<tr>
-													<td class="column11">Win Rates:</td>
-													<td class="column12">51/1460</td>
-												</tr>
-												<tr>
-													<td class="column11">Top 1:</td>
-													<td class="column12">3244</td>
-												</tr>
-												<tr>
-													<td class="column11">Top 25:</td>
-													<td class="column12">1704/1409</td>
-												</tr>
-												<tr>
-													<td class="column11">Players outlived</td>
-													<td class="column12">1704/1409</td>
-												</tr>
-												<tr>
-													<td class="column11">Time played:</td>
-													<td class="column12">1704/1409</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-								</div>
-							</div>
-						</div>
-					</td>
-				</tr>
-			</table>
+        
+        <div class= "player-box">
+		    <div class="player-specifics">
+		        <div id="profile-pic"> <img src="#" alt=" "> </div>
+		        <div id="profile-name"> playerName </div>
+		        <button id="refresh-button" name="refresh"class="btn btn-success"><i class="fas fa-sync"></i></button>
+		    </div>
+		    
+		    <div class="stats">
+	            <span id="stat-header">Stats: </span>
+	            <span id="stat"> <button> WINS     </button> </span>
+                <span id="stat"> <button> SCORE    </button> </span>
+		        <span id="stat"> <button> WINRATE  </button> </span>
+		        <span id="stat"> <button> KILLS    </button> </span>
+		        <span id="stat"> <button> K/D      </button> </span>        
+		    </div>
+		    
+	        <div class="current-stat">
+		        <div id="wins"></div>
+		        <div id="score"></div>
+		        <div id="kd"></div>
+		        <div id="matchesPlayed"></div>
+		        <div id="kills"></div>
+	        </div>    
 		</div>
-		<b style="margin-left: 500px; font-size: 50px;">Team stats</b>
-		<div id= "everyonesStats">
-			<div id = "killsDiv">
-				<h1>Rank by K/D</h1>
-				<div class="limiter2">
-					<div class="wrap2">
-						<div class="table2 ver1 m-b-110">
-							<div class="table2-body js-pscroll">
-								<table>
-									<tbody>
-										<tr>
-											<td class="column21">K/D</td>
-											<td class="column22">1704/1409</td>
-										</tr>
-
-										<tr>
-											<td class="column21">Kills</td>
-											<td class="column22">5073</td>
-										</tr>
-										<tr>
-											<td class="column21">Win Rates:</td>
-											<td class="column22">51/1460</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-					<div id="piechart1"></div>
-				</div>
-			</div>
-
-			<div id = "topOneDiv">
-				<h1>Ranking by Top 1 </h1>
-				<div class="limiter3">
-					<div class="wrap3">
-						<div class="table3 ver1 m-b-110">
-							<div class="table3-body js-pscroll">
-								<table>
-									<tbody>
-										<tr>
-											<td class="column31">K/D</td>
-											<td class="column32">1704/1409</td>
-										</tr>
-
-										<tr>
-											<td class="column31">Kills</td>
-											<td class="column32">5073</td>
-										</tr>
-										<tr>
-											<td class="column31">Win Rates:</td>
-											<td class="column32">51/1460</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-					<div id="piechart2"></div>
-				</div>
-			</div>
 			
-			<div id = "kdDiv">
-				<h1>Rank by K/D</h1>
-				<div class="limiter4">
-					<div class="wrap4">
-						<div class="table4 ver1 m-b-110">
-							<div class="table4-body js-pscroll">
-								<table>
-									<tbody>
-										<tr>
-											<td class="column41">K/D</td>
-											<td class="column42">1704/1409</td>
-										</tr>
+</body>
+<div class="g-signin2" style = "visibility:hidden"></div>
 
-										<tr>
-											<td class="column41">Kills</td>
-											<td class="column42">5073</td>
-										</tr>
-										<tr>
-											<td class="column41">Win Rates:</td>
-											<td class="column42">51/1460</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-					<div id="piechart3"></div>
-				</div>
-			</div>
-			<div id = "comparewithteammate">
-				<b style="margin-left: 350px; font-size: 50px;">Compare with Teammate</b>
-				<br>
-				<h2 id= "searchteammate">Search: <input type="text" id = "compairFriendTag"> <button type="button" id="compairbutton">Enter</button><h2>
-				
-			</div>	
-		</div>
-        
-        
-        
-        
-        
-    		
-    </body>
-    <div class="g-signin2" style = "visibility:hidden"></div>
-        
 </html>

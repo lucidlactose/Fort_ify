@@ -20,7 +20,7 @@
 		<header>
 			<div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="profile.php">My Stats</a>
+                <a href="profile.php?username=wickyticky">My Stats</a>
                 <a href="following.php">Following</a>
                 <a href="#">Followers</a>
                 <a href="fortHome.php" onclick="signOut()">Sign Out</a>
@@ -36,7 +36,7 @@
                 <button type="button" id ="searchButton"><i class="fa fa-search"></i></button>
                 <nav>
                     <a href id = "rankingsTab"src = "index.php">Rankings</a>
-                    <a href id = "newsTab" src = "index.php">News</a>
+                    <a href = "news.php" id = "newsTab" src = "index.php">News</a>
                     <a href id = "streamingTab" src = "index.php">Streaming</a>
                 </nav>
                 <span id = "sideMenu" onclick="openNav()">&#9776;</span>
