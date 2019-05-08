@@ -65,37 +65,6 @@ $(function() {
 		$("#wins").html("Wins: " + results.stats[5].displayValue);
 		$("#kd").html("K/D: " + results.stats[11].displayValue);
 		
-		$.ajax({
-			url: "API/insertPlayerStats.php",
-			type: "POST",
-			data:{
-				"id": $("#profile-id").html(),
-				"username": username,
-				"pictureUrl": $("#profile-pic").attr("src"),
-				"win_rate": results.stats[12].value,
-				"kill_death_ratio": results.stats[11].value,
-				"players_outlived": results.stats[10].value,
-				"place_top25": results.stats[9].value,
-				"place_top12": results.stats[8].value,
-				"place_top6": results.stats[7].value,
-				"place_top3": results.stats[6].value,
-				"place_top1": results.stats[5].value,
-				"time_played": results.stats[4].value,
-				"minutes_played":results.stats[3].value, 
-				"matches_played":results.stats[2].value,
-				"score": results.stats[1].value,
-				"kills": results.stats[0].value,
-			},
-			dataType: "text",
-            success: function(data, status) {
-                console.log("YEEYEEYEE")
-                console.log(data)
-            },
-            complete: function(data, status) {
-                console.log(data)
-            }
-		});
-		
 		console.log(results)
 	}
 	
@@ -127,6 +96,11 @@ $(function() {
                 console.log(data)
             }
         });
+        
+        Scout.players.search($("#profile-id").html(), "epic", null, "fortnite")
+			.then(search => Scout.players.get("fortnite", search.results[0].player.playerId))
+			.then(results => insertPlayer(results))
+		
         console.log(meUser);
 		
 	});
@@ -151,6 +125,39 @@ $(function() {
 	
 	
 });
+
+function insertPlayer(results) {
+	$.ajax({
+			url: "API/insertPlayerStats.php",
+			type: "POST",
+			data:{
+				"id": $("#profile-id").html(),
+				"username": username,
+				"pictureUrl": $("#profile-pic").attr("src"),
+				"win_rate": results.stats[12].value,
+				"kill_death_ratio": results.stats[11].value,
+				"players_outlived": results.stats[10].value,
+				"place_top25": results.stats[9].value,
+				"place_top12": results.stats[8].value,
+				"place_top6": results.stats[7].value,
+				"place_top3": results.stats[6].value,
+				"place_top1": results.stats[5].value,
+				"time_played": results.stats[4].value,
+				"minutes_played":results.stats[3].value, 
+				"matches_played":results.stats[2].value,
+				"score": results.stats[1].value,
+				"kills": results.stats[0].value,
+			},
+			dataType: "text",
+            success: function(data, status) {
+                console.log("YEEYEEYEE")
+                console.log(data)
+            },
+            complete: function(data, status) {
+                console.log(data)
+            }
+		});
+}
 function collectData(){
 	
 	var eh = gapi.auth2.init();
