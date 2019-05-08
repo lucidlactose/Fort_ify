@@ -1,10 +1,4 @@
-<!-- <?php
 
-//     $url = "https://localhost/searchResults.php";
-//     $queryString = http_build_query("username"=>username);
-
-// ?> 
--->
 
 <!DOCTYPE html>
 <html>
@@ -18,11 +12,10 @@
         <script type="text/javascript" src="js/profilePage.js"></script>
         <script type="text/javascript" src="js/homePage.js"></script>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
-        <!--<meta name="google-signin-client_id" content="383699114464-7kbvt4bcr25muoods8eargemgq3e46ro.apps.googleusercontent.com">-->
         <meta name="google-signin-client_id" content="771332740040-bst02ajh5o98uga1dk3e36sv30pjknuh.apps.googleusercontent.com">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
-
+        <!--<link type="text/css" rel="stylesheet" href="magicscroll-trial/magicscroll/magicscroll.css"/>-->
+        <!--<script type="text/javascript" src="magicscroll-trial/magicscroll/magicscroll.js"></script>-->
+        
     </head>
     <body>
         
@@ -31,9 +24,9 @@
                 <div id = "logo">
                     <h3 style = "color:white;">Fort-ify</h3>
                 </div>
-                <button type = "button" id="ps4Tab" ><i class="fab fa-playstation"></i></button>
-                <button type = "button" id="xbxTab" ><i class="fab fa-xbox"></i></button>
-                <button type = "button" id="pcTab" ><i class="fab fa-windows"></i></button>
+                <button type = "button" id="ps4Tab" >PS4</button>
+                <button type = "button" id="xbxTab" >XBX</button>
+                <button type = "button" id="pcTab" >PC</button>
                 <input type="text" placeholder="Enter your Epic Games username..." data-username="{{result['username']}}" name="search" id = "searchQ">
                 <button type="button" id ="searchButton"><i class="fa fa-search"></i></button>
                 <nav>
@@ -45,85 +38,93 @@
             </form>
 
         </header>
-            <!--***********The whole table div*********** -->
-    		<div id = "tables">
-    			<!--********** Global rank Table************ -->
-    			<div id = "globalRank">
-    				<br>
-    				<table id = "globalTable">
+    		<div id = "dailyItems">
+    			<br>
+    				<table id = "daily">
     					<tr>
-    						<b id= "sectionTitle">Global Stats</b>
+    						<b id= "sectionTitle">Daily Store Items</b>
     					</tr>
-    					<tr>
-    						<th>Username</th>
-    						<th>Wins</th>
-    					</tr>
-    					<tr id = "globalStats">
-    						<td>fduenez</td>
-    						<td>21</td>
-    					</tr>
+    					<?php
+    					// Setup the CURL session
+                        $cSession = curl_init();
+                        
+                        // Setup the CURL options
+                        curl_setopt($cSession,CURLOPT_URL,"https://fortnite-public-api.theapinetwork.com/prod09/store/get?language=en");
+                        curl_setopt($cSession,CURLOPT_RETURNTRANSFER,true);
+                        curl_setopt($cSession,CURLOPT_HEADER, false);
+                        
+                        // Add headers to the HTTP command
+                        curl_setopt($cSession,CURLOPT_HTTPHEADER, array(
+                            "Accept: application/json",
+                            "Content-Type: application/json",
+                        ));
+                        
+                        // Execute the CURL command
+                        $results = curl_exec($cSession);
+                        
+                        // Check for specific non-zero error numbers
+                        $errno = curl_errno($cSession);
+                        if ($errno) {
+                            switch ($errno) {
+                                default:
+                                    echo "Error #$errno...execution halted";
+                                    break;
+                            }
+                        
+                            // Close the session and exit
+                            curl_close($cSession);
+                            exit();
+                        }
+                        
+                        // Close the session
+                        curl_close($cSession);
+                        
+                        
+                        // json_encode($results);
+                        // $results = ($results);
+                        $results = json_decode($results,true);
+                        for($i = 0; $i < 10; $i += 2){
+                            $data = json_encode($results['items'][$i]["item"]["images"]["information"]);
+                            $data2 = json_encode($results['items'][$i + 1]["item"]["images"]["information"]);
+                            $data3 = json_encode($results['items'][$i + 2]["item"]["images"]["information"]);
+                            echo "<tr> <td><img src=" . $data . " onclick='myFunction(this);'/> </td> <td><img src=". $data2 . "onclick='myFunction(this);'/> </td> <td><img src=". $data3 . "onclick='myFunction(this);'/> </td> </tr>";
+                        }
+                        ?>
     				</table>
     				<br>
-    			
-    			</div>
-    			<!--********** xbox rank Table************ -->
-    			<div id = "xboxRank">
-    				<br>
-    				<table id = "xboxTable">
-    					<tr>
-    						<b id= "sectionTitle">Xbox Stats</b>
-    					</tr>
-    					<tr>
-    						<th>Username</th>
-    						<th>Wins</th>
-    					</tr>
-    					<tr id = "xboxStats">
-    						<td>fduenez</td>
-    						<td>21</td>
-    					</tr>
-    				</table>
-    				<br>
-    			
-    			</div>
-    			<!--********** ps4 rank Table************ -->
-    			<div id = "ps4Rank">
-    				<br>
-    				<table id = "ps4Table">
-    					<tr>
-    						<b id= "sectionTitle">PS4 Stats</b>
-    					</tr>
-    					<tr>
-    						<th>Username</th>
-    						<th>Wins</th>
-    					</tr>
-    					<tr id = "ps4Stats">
-    						<td>fduenez </td>
-    						<td>21</td>
-    					</tr>
-    				</table>
-    				<br>
-    			</div>
-    			<!--********** pc rank Table************ -->
-    			<div id = "pcRank">
-    				<br>
-    				<table  id = "pcTable">
-    					<tr>
-    						<b id= "sectionTitle">PC Stats</b>
-    					</tr>
-    					<tr>
-    						<th>Username</th>
-    						<th>Wins</th>
-    					</tr>
-    					<tr id = "pcStats ">
-    						<td>fduenez </td>
-    						<td>21</td> 
-    						
-    					</tr>
-    				</table>
-    				<br>
-    			</div>
-    		</div>
+    			    
 
+                        
+                </div>
+    		</div>
+    			<!--********** xbox rank Table************ -->
+    			<div id = "upComingItems">
+    			    <div class="MagicScroll" data-options="mode: carousel; height: 275px;">
+                        
+                    </div>
+    			</div>
+    			
+    		<div id="myModal" class="modal">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="img01">
+            </div>
         </body>
-        
+        <script>
+                function myFunction(imgs) {
+                console.log("my pussy");
+                console.log(imgs);
+                // Get the modal
+                var modal = document.getElementById('myModal');
+                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                var modalImg = document.getElementById("img01");
+                modal.style.display = "block";
+                modalImg.src = imgs.src;
+                var span = document.getElementsByClassName("close")[0];
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() { 
+                modal.style.display = "none";
+                };
+            }
+        </script>
+    
 </html>
