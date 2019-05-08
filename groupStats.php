@@ -45,10 +45,11 @@
 		<div id = "playerstats">
 			<table id = "myStatsTable">
 				<tr>
+					<br><br><br><br>
 					<b id= "gamertag">Fduenez</b>
 				</tr>
 				<tr>
-					<td id="mystatimgtd"><img src="img/player3.png"/><td>
+					<td id="mystatimgtd"><img src="img/player3.png" style="width:400px; height:370px;"/><td>
 					<td>
 						<div class="limiter1">
 							<div class="wrap1">
@@ -95,9 +96,16 @@
 				</tr>
 			</table>
 		</div>
-		<b style="margin-left: 500px; font-size: 50px;">Team stats</b>
 		<div id= "everyonesStats">
+			<div id = "comparewithteammate">
+				<div id="comparemove">
+					<b style="margin-left: 350px; font-size: 50px;"><u>Compare with Teammate</u></b>
+					<br>
+					<h2 id= "searchteammate">Search: <input type="text" id = "compairFriendTag"> <button type="button" id="compairbutton">Enter</button><h2>
+				</div>
+			</div>	
 			<div id = "killsDiv">
+				<b style="margin-left: 700px; font-size: 50px;"><u>Team stats</u></b>
 				<h1>Rank by Kills</h1>
 				<div class="limiter2">
 					<div class="wrap2">
@@ -114,7 +122,6 @@
 					<div id="piechart1"></div>
 				</div>
 			</div>
-
 			<div id = "topOneDiv">
 				<h1>Ranking by Wins </h1>
 				<div class="limiter3">
@@ -132,7 +139,6 @@
 					<div id="piechart2"></div>
 				</div>
 			</div>
-			
 			<div id = "kdDiv">
 				<h1>Rank by K/D</h1>
 				<div class="limiter4">
@@ -150,14 +156,7 @@
 					<div id="piechart3"></div>
 				</div>
 			</div>
-			<div id = "comparewithteammate">
-				<b style="margin-left: 350px; font-size: 50px;">Compare with Teammate</b>
-				<br>
-				<h2 id= "searchteammate">Search: <input type="text" id = "compairFriendTag"> <button type="button" id="compairbutton">Enter</button><h2>
-				
-			</div>	
 		</div>
-		
 	</body>
 	<div class="g-signin2" style = "visibility:hidden"></div>
 
