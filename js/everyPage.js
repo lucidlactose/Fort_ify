@@ -11,18 +11,52 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
-    
+var meUser;
 function search() {
     username = $("[name=search]").val();
     if (username !== "") {
         username = username.split(" ").join("+");
         for (i=0; i<username.length; ++i) {
             if (username !== "+") {
-                console.log(username);
+                // console.log(username);
+        		
+            }
+        }       
+        
+        collectData();
+        $.ajax({
+            url: "API/logQuery.php",
+            type: "POST",
+            data: {
+                "id": meUser, 
+                "search": username,
+            },
+            dataType: "text",
+            success: function(data, status) {
+                console.log(data)
                 window.location.href = "searchResults.php?username=" + username;
-            }    
-        }
+            },
+            // complete: function(data, status) {
+            //     console.log(data)
+            // }
+        })
     }
+}
+function collectData(){
+	
+	var eh = gapi.auth2.init();
+	eh = gapi.auth2.getAuthInstance();
+	
+	if(eh.isSignedIn.get()){
+		var profile = eh.currentUser.get().getBasicProfile();
+		console.log('ID: ' + profile.getId());
+		meUser = profile.getId();
+		
+	}
+	else{
+	    alert("there was an issue");
+	}
+	
 }
 
 $(function(){
@@ -57,9 +91,8 @@ $(function(){
 
 $(document).on('keypress', function(e) {
     var keycode = event.keyCode || event.which;
-    if (keycode == 13) {
+    if (keycode === 13) {
         e.preventDefault();
-        console.log("aspkdasiojd")
         search();
     }
 });

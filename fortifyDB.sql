@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2019 at 02:21 AM
+-- Generation Time: May 08, 2019 at 02:54 AM
 -- Server version: 5.5.57-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.22
 
@@ -94,7 +94,7 @@ INSERT INTO `player_stats` (`id`, `player_id`, `username`, `pictureUrl`, `win_ra
 
 CREATE TABLE IF NOT EXISTS `search_query` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(20) NOT NULL,
+  `user_id` varchar(20) NOT NULL,
   `search` varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
