@@ -50,7 +50,7 @@ $(function() {
                 +
                 "<th>"
                 +
-    		    "<a href = 'https://cst336spring2019-enriquemosqueda.c9users.io/Final%20Project/Fort_ify/searchResults.php?username=" + username +"'>"+ username +"</a>"
+    		    "<a href = 'searchResults.php?username=" + username +"'>"+ username +"</a>"
     		    +
     		    "</th>"
     		    +
