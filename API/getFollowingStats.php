@@ -9,7 +9,7 @@ $np[":following_id"] = $_POST["id"];
 $sql = "SELECT player_stats.* 
         FROM following
         INNER JOIN player_stats
-        ON following.user_id = player_stats.player_id;
+        ON following.user_id = player_stats.player_id
         WHERE following.user_id = :following_id";
 
 $stmt = $conn->prepare($sql);
