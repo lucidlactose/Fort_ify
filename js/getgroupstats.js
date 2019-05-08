@@ -30,12 +30,12 @@ $(function() {
                     sortedArr[i] = [two,one];
                 }
                 for(var i =0 ; i<sortedArr.length; i++){
-                    for(var j=sortedArr.length-1-i; j>0; j--){
-                        if(sortedArr[j][0]>sortedArr[j-1][0]){
+                    for(var j=0; j<sortedArr.length-1-i; j++){
+                        if(sortedArr[j][0]<sortedArr[j+1][0]){
                             var temp = new Array();
                             temp = sortedArr[j];
-                            sortedArr[j]= sortedArr[j-1];
-                            sortedArr[j-1] = temp
+                            sortedArr[j]= sortedArr[j+1];
+                            sortedArr[j+1] = temp;
                         }
                     }
                 }
@@ -82,12 +82,12 @@ $(function() {
                     sortedArr[i] = [two,one];
                 }
                 for(var i =0 ; i<sortedArr.length; i++){
-                    for(var j=sortedArr.length-1-i; j>0; j--){
-                        if(sortedArr[j][0]>sortedArr[j-1][0]){
+                    for(var j=0; j<sortedArr.length-1-i; j++){
+                        if(sortedArr[j][0]<sortedArr[j+1][0]){
                             var temp = new Array();
                             temp = sortedArr[j];
-                            sortedArr[j]= sortedArr[j-1];
-                            sortedArr[j-1] = temp
+                            sortedArr[j]= sortedArr[j+1];
+                            sortedArr[j+1] = temp;
                         }
                     }
                 }
@@ -131,12 +131,12 @@ $(function() {
                     sortedArr[i] = [two,one];
                 }
                 for(var i =0 ; i<sortedArr.length; i++){
-                    for(var j=sortedArr.length-1-i; j>0; j--){
-                        if(sortedArr[j][0]>sortedArr[j-1][0]){
+                    for(var j=0; j<sortedArr.length-1-i; j++){
+                        if(sortedArr[j][0]<sortedArr[j+1][0]){
                             var temp = new Array();
                             temp = sortedArr[j];
-                            sortedArr[j]= sortedArr[j-1];
-                            sortedArr[j-1] = temp
+                            sortedArr[j]= sortedArr[j+1];
+                            sortedArr[j+1] = temp;
                         }
                     }
                 }
