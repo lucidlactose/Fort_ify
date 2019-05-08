@@ -117,3 +117,24 @@ Stack trace:
 [07-May-2019 22:47:26 UTC] PHP Stack trace:
 [07-May-2019 22:47:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/finalproject/Fort_ify/API/unfollowPlayer.php:0
 [07-May-2019 22:47:26 UTC] PHP   2. json_decode() /home/ubuntu/workspace/finalproject/Fort_ify/API/unfollowPlayer.php:22
+[07-May-2019 23:37:29 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null' in /home/ubuntu/workspace/finalproject/Fort_ify/API/followPlayer.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/finalproject/Fort_ify/API/followPlayer.php(14): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/finalproject/Fort_ify/API/followPlayer.php on line 14
+[07-May-2019 23:37:47 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/ubuntu/workspace/finalproject/Fort_ify/API/followPlayer.php on line 18
+[07-May-2019 23:37:47 UTC] PHP Stack trace:
+[07-May-2019 23:37:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/finalproject/Fort_ify/API/followPlayer.php:0
+[07-May-2019 23:37:47 UTC] PHP   2. json_decode() /home/ubuntu/workspace/finalproject/Fort_ify/API/followPlayer.php:18
+[07-May-2019 23:38:01 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/ubuntu/workspace/finalproject/Fort_ify/API/unfollowPlayer.php on line 22
+[07-May-2019 23:38:01 UTC] PHP Stack trace:
+[07-May-2019 23:38:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/finalproject/Fort_ify/API/unfollowPlayer.php:0
+[07-May-2019 23:38:01 UTC] PHP   2. json_decode() /home/ubuntu/workspace/finalproject/Fort_ify/API/unfollowPlayer.php:22
+[08-May-2019 00:50:27 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/ubuntu/workspace/finalproject/Fort_ify/API/followPlayer.php on line 18
+[08-May-2019 00:50:27 UTC] PHP Stack trace:
+[08-May-2019 00:50:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/finalproject/Fort_ify/API/followPlayer.php:0
+[08-May-2019 00:50:27 UTC] PHP   2. json_decode() /home/ubuntu/workspace/finalproject/Fort_ify/API/followPlayer.php:18
+[08-May-2019 00:50:40 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/ubuntu/workspace/finalproject/Fort_ify/API/unfollowPlayer.php on line 22
+[08-May-2019 00:50:40 UTC] PHP Stack trace:
+[08-May-2019 00:50:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/finalproject/Fort_ify/API/unfollowPlayer.php:0
+[08-May-2019 00:50:40 UTC] PHP   2. json_decode() /home/ubuntu/workspace/finalproject/Fort_ify/API/unfollowPlayer.php:22
