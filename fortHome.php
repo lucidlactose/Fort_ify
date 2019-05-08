@@ -92,17 +92,69 @@
                         ?>
     				</table>
     				<br>
-    			    
-
-                        
                 </div>
-    		</div>
-    			<!--********** xbox rank Table************ -->
-    			<div id = "upComingItems">
-    			    <div class="MagicScroll" data-options="mode: carousel; height: 275px;">
+            <div id = "upComingItems">
+    			<br>
+    				<table id = "upComing">
+    					<tr>
+    						<b id= "sectionTitle">Upcomming Items</b>
+    					</tr>
+    					<?php
+    					// Setup the CURL session
+                        $cSession = curl_init();
                         
-                    </div>
-    			</div>
+                        // Setup the CURL options
+                        curl_setopt($cSession,CURLOPT_URL,"https://fortnite-public-api.theapinetwork.com/prod09/upcoming/get");
+                        curl_setopt($cSession,CURLOPT_RETURNTRANSFER,true);
+                        curl_setopt($cSession,CURLOPT_HEADER, false);
+                        
+                        // Add headers to the HTTP command
+                        curl_setopt($cSession,CURLOPT_HTTPHEADER, array(
+                            "Accept: application/json",
+                            "Content-Type: application/json",
+                        ));
+                        
+                        // Execute the CURL command
+                        $results = curl_exec($cSession);
+                        
+                        // Check for specific non-zero error numbers
+                        $errno = curl_errno($cSession);
+                        if ($errno) {
+                            switch ($errno) {
+                                default:
+                                    echo "Error #$errno...execution halted";
+                                    break;
+                            }
+                        
+                            // Close the session and exit
+                            curl_close($cSession);
+                            exit();
+                        }
+                        
+                        // Close the session
+                        curl_close($cSession);
+                        
+                        
+                        // json_encode($results);
+                        // $results = ($results);
+                        $results = json_decode($results,true);
+                        for($i = 0; $i < 10; $i += 2){
+                            $data = json_encode($results['items'][$i]["item"]["images"]["information"]);
+                            $data2 = json_encode($results['items'][$i + 1]["item"]["images"]["information"]);
+                            $data3 = json_encode($results['items'][$i + 2]["item"]["images"]["information"]);
+                            echo "<tr> <td><img src=" . $data . " onclick='myFunction(this);'/> </td> <td><img src=". $data2 . "onclick='myFunction(this);'/> </td> <td><img src=". $data3 . "onclick='myFunction(this);'/> </td> </tr>";
+                        }
+                        ?>
+    				</table>
+    				<br>
+                </div>
+                
+    		</div>
+    			<!--<div id = "upComingItems">-->
+    			<!--    <div class="MagicScroll" data-options="mode: carousel; height: 275px;">-->
+                        
+       <!--             </div>-->
+    			<!--</div>-->
     			
     		<div id="myModal" class="modal">
               <span class="close">&times;</span>
