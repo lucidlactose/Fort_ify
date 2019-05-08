@@ -35,18 +35,19 @@ $np[":place_top6"] = $_POST["place_top6"];
 $np[":place_top3"] = $_POST["place_top3"];
 $np[":place_top1"] = $_POST["place_top1"];
 $np[":time_played"] = $_POST["time_played"];
-$np[":matches_played"] = $_POST["minutes_played"];
+$np[":minutes_played"] = $_POST["minutes_played"];
+$np[":matches_played"] = $_POST["matches_played"];
 $np[":score"] = $_POST["score"];
 $np[":kills"] = $_POST["kills"];
 
 $sql = "INSERT INTO player_stats (
             player_id, username, pictureUrl, win_rate, kill_death_ratio, players_outlived, 
-            place_top25, place_top12, place_top6, place_top3, place_top1, time_played, 
+            place_top25, place_top12, place_top6, place_top3, place_top1, time_played,minutes_played,
             matches_played, score, kills 
         ) 
         VALUES (
             :player_id, :username, :pictureUrl, :win_rate, :kill_death_ratio, :players_outlived,
-            :place_top25, :place_top12, :place_top6, :place_top3, :place_top1, :time_played,
+            :place_top25, :place_top12, :place_top6, :place_top3, :place_top1, :time_played, :minutes_played,
             :matches_played, :score, :kills
         )";
 
