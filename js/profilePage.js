@@ -13,8 +13,7 @@
 // }
 
 $(function() {
-    
-
+    console.log(localStorage.userId);
 });
 function signOut() {
     
