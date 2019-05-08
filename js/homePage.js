@@ -10,7 +10,7 @@ function onSignIn(googleUser) {
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
     var userId = profile.getId();
     localStorage.setItem("userId",userId);
-    window.location.assign("profile.php");
+    window.location.assign("profile.php?username=wickyticky");
 }
 function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();

@@ -117,6 +117,7 @@ $(function() {
 		
 	});
 	$("#unfollow-button").on("click",function(){
+		collectData();
 		$.ajax({
             url: "API/unfollowPlayer.php",
             type: "POST",
@@ -182,7 +183,7 @@ function collectData(){
 		
 	}
 	else{
-	    alert("there was an issue");
+	    // alert("there was an issue");
 	}
 	
 }

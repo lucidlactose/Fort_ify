@@ -3,15 +3,16 @@
 include "dbConnection.php";
 $conn = getDatabaseConnection();
 
-// $np = array();
-// $np[":follower"] = $_POST["me"];
-// $np[":followee"] = $_POST["them"];
+$np = array();
+$np[":me"] = $_POST["me"];
+$np[":them"] = $_POST["them"];
 
-$me_id = $_POST['me'];
-$them_id = $_POST["them"];
+// $me_id = $_POST['me'];
+// $them_id = $_POST["them"];
 
 
-$sql = "DELETE FROM following WHERE following_id = '$them_id' AND user_id = '$me_id'";
+$sql = "DELETE FROM following
+        WHERE user_id LIKE :me AND following_id = :them";
 
 
 $stmt = $conn->prepare($sql);

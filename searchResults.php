@@ -27,7 +27,7 @@
 		<header>
 		    <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="profile.php">My Stats</a>
+                <a href="profile.php?username=wickyticky">My Stats</a>
                 <a href="following.php">Following</a>
                 <a href="#">Followers</a>
                 <a href="fortHome.php" onclick="signOut()">Sign Out</a>
@@ -43,7 +43,7 @@
                 <button type="button" id ="searchButton"><i class="fa fa-search"></i></button>
                 <nav>
                     <a href = "groupStats.php" id = "rankingsTab"src = "index.php">Rankings</a>
-                    <a href id = "newsTab" src = "index.php">News</a>
+                    <a href = "news.php" id = "newsTab" src = "index.php">News</a>
                     <a href id = "streamingTab" src = "index.php">Streaming</a>
                     
                 </nav>
@@ -70,11 +70,11 @@
 		    </div>
 		    
 	        <div class="current-stat">
-		        <div id="wins"> Here are my amount of wins. Maybe you can help increase it ;) </div>
-		        <div id="score"> Here's my score: </div>
-		        <div id="kd"> My k/d... ik im not that good... maybe... you can help ;> </div>
-		        <div id="matchesPlayed"> I wish could play more.... with youuu </div>
-		        <div id="kills"> kills: </div>
+		        <div id="wins"></div>
+		        <div id="score"></div>
+		        <div id="kd"></div>
+		        <div id="matchesPlayed"></div>
+		        <div id="kills"></div>
 	        </div>    
 		</div>
 			
